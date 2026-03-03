@@ -1,8 +1,12 @@
+'use client'
+
+import { useState, useEffect } from 'react'
 import { INSTAGRAM_URL, DOCS_CONSULTORIA_URL } from '@/lib/constants'
 import styles from './Footer.module.css'
 
 export function Footer() {
-  const year = new Date().getFullYear()
+  const [year, setYear] = useState(2026)
+  useEffect(() => { setYear(new Date().getFullYear()) }, [])
 
   return (
     <footer className={styles.footer} role="contentinfo">
