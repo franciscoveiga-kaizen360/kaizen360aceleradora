@@ -1,0 +1,118 @@
+.section {
+  background-color: var(--color-bg);
+  padding: var(--section-padding-y) var(--section-padding-x);
+  opacity: 0;
+  transform: translateY(2rem);
+  transition:
+    opacity var(--transition-xslow),
+    transform var(--transition-xslow);
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section { opacity: 1; transform: none; transition: none; }
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+.header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.title {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+  margin: 0;
+  line-height: var(--line-height-heading);
+}
+
+.subtitle {
+  font-size: var(--font-size-body-lg);
+  color: var(--color-muted);
+  margin: 0;
+}
+
+/* ─── Steps ──────────────────────────── */
+.steps {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  position: relative;
+}
+
+.stepWrapper {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+}
+
+.connector {
+  flex-shrink: 0;
+  width: 4rem;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-primary), rgba(232, 119, 34, 0.3));
+  margin-top: 2.5rem; /* align with center of icon circle */
+  position: relative;
+}
+
+.connector::after {
+  content: '▶';
+  position: absolute;
+  right: -0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.5rem;
+  color: rgba(232, 119, 34, 0.6);
+}
+
+/* ─── Responsive ──────────────────────── */
+@media (max-width: 767px) {
+  .steps {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-8);
+  }
+
+  .stepWrapper {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .connector {
+    width: 2px;
+    height: 2.5rem;
+    background: linear-gradient(180deg, var(--color-primary), rgba(232, 119, 34, 0.3));
+    margin-top: 0;
+    margin-left: 50%;
+  }
+
+  .connector::after {
+    content: '▼';
+    right: auto;
+    left: 50%;
+    top: auto;
+    bottom: -0.5rem;
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .connector {
+    width: 2rem;
+  }
+}

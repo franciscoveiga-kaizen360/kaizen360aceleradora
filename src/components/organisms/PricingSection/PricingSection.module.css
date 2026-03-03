@@ -1,0 +1,139 @@
+.section {
+  background-color: var(--color-surface);
+  padding: var(--section-padding-y) var(--section-padding-x);
+  opacity: 0;
+  transform: translateY(2rem);
+  transition:
+    opacity var(--transition-xslow),
+    transform var(--transition-xslow);
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section { opacity: 1; transform: none; transition: none; }
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+.header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.title {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+  margin: 0;
+  line-height: var(--line-height-heading);
+}
+
+.subtitle {
+  font-size: var(--font-size-body-lg);
+  color: var(--color-muted);
+  margin: 0;
+}
+
+/* ─── Plans grid ─────────────────────── */
+.plansGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  align-items: start;
+}
+
+/* ─── Implementation fee ─────────────── */
+.implFee {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.implFeeTitle {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+  margin: 0;
+}
+
+.implFeeNote {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-muted);
+}
+
+.implFeeTableWrapper {
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.implFeeTable {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 16rem;
+}
+
+.implTh {
+  background-color: var(--color-surface);
+  color: var(--color-muted);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-align: left;
+  padding: var(--space-3) var(--space-6);
+}
+
+.implRow:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.implTd {
+  padding: var(--space-4) var(--space-6);
+  font-size: var(--font-size-body);
+  color: var(--color-white);
+  border-top: 1px solid var(--color-border);
+}
+
+.implValue {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+}
+
+.implFeeSubNote {
+  font-size: var(--font-size-small);
+  color: var(--color-muted);
+  margin: 0;
+}
+
+/* ─── Responsive ──────────────────────── */
+@media (max-width: 767px) {
+  .plansGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .plansGrid {
+    grid-template-columns: 1fr;
+    max-width: 36rem;
+    margin: 0 auto;
+  }
+}

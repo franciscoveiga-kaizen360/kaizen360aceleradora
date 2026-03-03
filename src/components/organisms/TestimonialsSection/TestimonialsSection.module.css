@@ -1,0 +1,124 @@
+.section {
+  background-color: var(--color-surface);
+  padding: var(--section-padding-y) var(--section-padding-x);
+  opacity: 0;
+  transform: translateY(2rem);
+  transition: opacity var(--transition-xslow), transform var(--transition-xslow);
+}
+
+.section.visible { opacity: 1; transform: translateY(0); }
+
+@media (prefers-reduced-motion: reduce) {
+  .section { opacity: 1; transform: none; transition: none; }
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.header { text-align: center; display: flex; flex-direction: column; gap: var(--space-4); }
+
+.title {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+  margin: 0;
+  line-height: var(--line-height-heading);
+}
+
+.subtitle { font-size: var(--font-size-body-lg); color: var(--color-muted); margin: 0; }
+
+/* ─── Carousel ───────────────────────── */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  outline: none;
+}
+
+.carousel:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+}
+
+.track {
+  display: flex;
+  transition: transform var(--transition-slow);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track { transition: none; }
+}
+
+.slide {
+  min-width: 100%;
+  padding: 0 var(--space-12);
+}
+
+/* ─── Nav buttons ────────────────────── */
+.navBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--radius-full);
+  background-color: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  color: var(--color-white);
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.navBtn:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.navBtn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.navPrev { left: 0; }
+.navNext { right: 0; }
+
+/* ─── Dots ───────────────────────────── */
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: var(--radius-full);
+  background-color: var(--color-border);
+  border: none;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+  padding: 0;
+}
+
+.dotActive {
+  background-color: var(--color-primary);
+  transform: scale(1.4);
+}
+
+/* ─── Responsive ──────────────────────── */
+@media (max-width: 767px) {
+  .slide { padding: 0 var(--space-8); }
+  .navPrev { left: var(--space-1); }
+  .navNext { right: var(--space-1); }
+}

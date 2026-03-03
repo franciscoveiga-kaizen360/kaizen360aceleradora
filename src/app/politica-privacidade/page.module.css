@@ -1,0 +1,59 @@
+.page {
+  background-color: var(--color-bg);
+  min-height: 100vh;
+  padding: var(--space-16) var(--section-padding-x);
+}
+
+.container {
+  max-width: 48rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.title {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+  margin: 0;
+}
+
+.updated {
+  font-size: var(--font-size-small);
+  color: var(--color-muted);
+  margin: 0;
+}
+
+.section h2 {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin: 0 0 var(--space-3);
+}
+
+.section p {
+  font-size: var(--font-size-body);
+  color: var(--color-muted);
+  line-height: var(--line-height-body);
+  margin: 0;
+}
+
+.note {
+  font-size: var(--font-size-small);
+  color: var(--color-warning);
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  margin: 0;
+}
+
+.back {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-semibold);
+}
+
+.back:hover { text-decoration: underline; }
