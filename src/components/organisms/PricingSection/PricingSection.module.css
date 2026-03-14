@@ -1,6 +1,10 @@
+/* PricingSection.module.css — Premium pricing section */
+
 .section {
-  background-color: var(--color-surface);
+  background: var(--gradient-section-alt);
   padding: var(--section-padding-y) var(--section-padding-x);
+  position: relative;
+  overflow: hidden;
   opacity: 0;
   transform: translateY(2rem);
   transition:
@@ -17,33 +21,58 @@
   .section { opacity: 1; transform: none; transition: none; }
 }
 
+/* Ambient glow center */
+.section::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60rem;
+  height: 20rem;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(232, 119, 34, 0.06) 0%, transparent 65%);
+  pointer-events: none;
+}
+
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: var(--space-12);
+  position: relative;
+  z-index: 1;
 }
 
 .header {
   text-align: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: var(--space-4);
 }
 
+.eyebrow {
+  /* uses .section-eyebrow utility */
+}
+
 .title {
+  font-family: var(--font-display);
   font-size: var(--font-size-h2);
   font-weight: var(--font-weight-bold);
   color: var(--color-white);
   margin: 0;
   line-height: var(--line-height-heading);
+  letter-spacing: -0.02em;
 }
 
 .subtitle {
+  font-family: var(--font-body);
   font-size: var(--font-size-body-lg);
   color: var(--color-muted);
   margin: 0;
+  max-width: 40rem;
 }
 
 /* ─── Plans grid ─────────────────────── */
@@ -56,9 +85,11 @@
 
 /* ─── Implementation fee ─────────────── */
 .implFee {
-  background-color: var(--color-bg);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  background: var(--color-surface-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-xl);
   padding: var(--space-8);
   display: flex;
   flex-direction: column;
@@ -66,13 +97,16 @@
 }
 
 .implFeeTitle {
+  font-family: var(--font-display);
   font-size: var(--font-size-h4);
   font-weight: var(--font-weight-bold);
   color: var(--color-white);
   margin: 0;
+  letter-spacing: -0.01em;
 }
 
 .implFeeNote {
+  font-family: var(--font-body);
   font-size: var(--font-size-small);
   font-weight: var(--font-weight-regular);
   color: var(--color-muted);
@@ -81,7 +115,7 @@
 .implFeeTableWrapper {
   overflow-x: auto;
   border-radius: var(--radius-md);
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
 .implFeeTable {
@@ -91,33 +125,37 @@
 }
 
 .implTh {
-  background-color: var(--color-surface);
+  background: rgba(255, 255, 255, 0.04);
   color: var(--color-muted);
+  font-family: var(--font-body);
   font-size: var(--font-size-caption);
   font-weight: var(--font-weight-semibold);
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.08em;
   text-align: left;
   padding: var(--space-3) var(--space-6);
 }
 
 .implRow:nth-child(even) {
-  background-color: rgba(255, 255, 255, 0.02);
+  background: rgba(255, 255, 255, 0.02);
 }
 
 .implTd {
   padding: var(--space-4) var(--space-6);
+  font-family: var(--font-body);
   font-size: var(--font-size-body);
   color: var(--color-white);
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid rgba(255,255,255,0.06);
 }
 
 .implValue {
+  font-family: var(--font-display);
   font-weight: var(--font-weight-bold);
   color: var(--color-primary);
 }
 
 .implFeeSubNote {
+  font-family: var(--font-body);
   font-size: var(--font-size-small);
   color: var(--color-muted);
   margin: 0;

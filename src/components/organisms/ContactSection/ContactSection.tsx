@@ -43,6 +43,10 @@ export function ContactSection() {
     >
       <div className={styles.container}>
         <header className={styles.header}>
+          <span className={`section-eyebrow ${styles.eyebrow}`}>
+            <span aria-hidden="true">✉</span>
+            Fale conosco
+          </span>
           <h2 id="contact-heading" className={styles.title}>
             Prefere mandar uma mensagem?
           </h2>

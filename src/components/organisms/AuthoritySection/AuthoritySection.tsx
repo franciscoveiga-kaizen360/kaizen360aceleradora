@@ -47,6 +47,10 @@ export function AuthoritySection() {
     >
       <div className={styles.container}>
         <header className={styles.header}>
+          <span className={`section-eyebrow ${styles.eyebrow}`}>
+            <span aria-hidden="true">🏛</span>
+            Nossa Autoridade
+          </span>
           <h2 id="authority-heading" className={styles.title}>
             Criado por quem entende de{' '}
             <span className={styles.accent}>Radiologia Odontológica</span>

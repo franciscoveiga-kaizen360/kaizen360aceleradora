@@ -1,3 +1,5 @@
+/* Navbar.module.css — Glassmorphism navbar */
+
 .header {
   position: fixed;
   top: 0;
@@ -5,14 +7,17 @@
   right: 0;
   z-index: var(--z-sticky);
   padding: var(--space-4) var(--section-padding-x);
-  transition: background-color var(--transition-base), box-shadow var(--transition-base);
+  transition:
+    background-color var(--transition-base),
+    box-shadow var(--transition-base),
+    backdrop-filter var(--transition-base);
 }
 
 .header.scrolled {
-  background-color: rgba(26, 26, 46, 0.95);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 1px 0 var(--color-border);
+  background-color: rgba(11, 11, 24, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06), 0 4px 24px rgba(0,0,0,0.4);
 }
 
 .nav {
@@ -28,30 +33,34 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: var(--space-2);
+  gap: var(--space-3);
   text-decoration: none;
   flex-shrink: 0;
 }
 
 .logoMark {
-  width: 2rem;
-  height: 2rem;
+  width: 2.25rem;
+  height: 2.25rem;
   border-radius: var(--radius-md);
-  background: linear-gradient(135deg, var(--color-primary), var(--color-gold));
+  background: var(--gradient-brand);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: var(--font-size-body);
-  font-weight: var(--font-weight-bold);
+  font-family: var(--font-display);
+  font-size: var(--font-size-small);
+  font-weight: 700;
   color: var(--color-white);
   flex-shrink: 0;
+  box-shadow: 0 2px 12px rgba(232, 119, 34, 0.4);
 }
 
 .logoName {
+  font-family: var(--font-display);
   font-size: var(--font-size-small);
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-bold);
   color: var(--color-white);
   white-space: nowrap;
+  letter-spacing: -0.01em;
 }
 
 /* ─── Desktop links ──────────────────── */
@@ -67,16 +76,35 @@
 }
 
 .link {
+  font-family: var(--font-body);
   font-size: var(--font-size-small);
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-medium);
   color: var(--color-muted);
   text-decoration: none;
   transition: color var(--transition-fast);
   white-space: nowrap;
+  position: relative;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--color-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-base);
 }
 
 .link:hover {
   color: var(--color-white);
+}
+
+.link:hover::after {
+  transform: scaleX(1);
 }
 
 /* ─── Desktop CTA ────────────────────── */
@@ -115,8 +143,10 @@
 
 /* ─── Mobile menu ────────────────────── */
 .mobileMenu {
-  background-color: var(--color-surface);
-  border-top: 1px solid var(--color-border);
+  background: rgba(11, 11, 24, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255,255,255,0.07);
   padding: var(--space-6) var(--section-padding-x);
   display: flex;
   flex-direction: column;
@@ -135,11 +165,12 @@
 .mobileLink {
   display: block;
   padding: var(--space-4) 0;
+  font-family: var(--font-body);
   font-size: var(--font-size-body);
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-medium);
   color: var(--color-muted);
   text-decoration: none;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
   transition: color var(--transition-fast);
 }
 

@@ -1,3 +1,5 @@
+/* StepItem.module.css — Premium step item */
+
 .item {
   display: flex;
   flex-direction: column;
@@ -5,6 +7,7 @@
   gap: var(--space-4);
   text-align: center;
   position: relative;
+  padding: var(--space-4);
 }
 
 .iconWrapper {
@@ -16,48 +19,60 @@
 
 .stepNumber {
   position: absolute;
-  top: -0.625rem;
-  right: -0.625rem;
-  width: 1.5rem;
-  height: 1.5rem;
+  top: -0.75rem;
+  right: -0.75rem;
+  width: 1.625rem;
+  height: 1.625rem;
   border-radius: var(--radius-full);
-  background-color: var(--color-primary);
+  background: var(--gradient-brand);
   color: var(--color-white);
+  font-family: var(--font-display);
   font-size: var(--font-size-caption);
-  font-weight: var(--font-weight-bold);
+  font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1;
+  box-shadow: 0 2px 10px rgba(232, 119, 34, 0.4);
 }
 
 .iconCircle {
   width: 5rem;
   height: 5rem;
   border-radius: var(--radius-full);
-  background: linear-gradient(135deg, rgba(232, 119, 34, 0.15), rgba(232, 119, 34, 0.05));
-  border: 2px solid rgba(232, 119, 34, 0.3);
+  background: rgba(232, 119, 34, 0.08);
+  border: 1.5px solid rgba(232, 119, 34, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--color-primary);
+  transition: background var(--transition-base), box-shadow var(--transition-base);
+}
+
+.item:hover .iconCircle {
+  background: rgba(232, 119, 34, 0.14);
+  box-shadow: 0 0 24px rgba(232, 119, 34, 0.18);
 }
 
 .content {
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
+  max-width: 14rem;
 }
 
 .title {
+  font-family: var(--font-display);
   font-size: var(--font-size-h4);
   font-weight: var(--font-weight-bold);
   color: var(--color-white);
   margin: 0;
   line-height: var(--line-height-heading);
+  letter-spacing: -0.01em;
 }
 
 .description {
+  font-family: var(--font-body);
   font-size: var(--font-size-body);
   color: var(--color-muted);
   margin: 0;

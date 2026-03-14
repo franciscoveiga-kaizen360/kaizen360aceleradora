@@ -1,6 +1,10 @@
+/* AuthoritySection.module.css */
+
 .section {
-  background-color: var(--color-surface);
+  background: var(--color-bg);
   padding: var(--section-padding-y) var(--section-padding-x);
+  position: relative;
+  overflow: hidden;
   opacity: 0;
   transform: translateY(2rem);
   transition:
@@ -17,38 +21,67 @@
   .section { opacity: 1; transform: none; transition: none; }
 }
 
+/* Top ambient glow */
+.section::before {
+  content: '';
+  position: absolute;
+  top: -6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40rem;
+  height: 16rem;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(201, 168, 76, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: var(--space-12);
+  position: relative;
+  z-index: 1;
 }
 
 .header {
   text-align: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: var(--space-4);
 }
 
+.eyebrow {
+  /* uses .section-eyebrow utility */
+}
+
 .title {
+  font-family: var(--font-display);
   font-size: var(--font-size-h2);
   font-weight: var(--font-weight-bold);
   color: var(--color-white);
   margin: 0;
   line-height: var(--line-height-heading);
+  letter-spacing: -0.02em;
+  max-width: 32rem;
 }
 
-.accent { color: var(--color-primary); }
+.accent {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 
 .subtitle {
+  font-family: var(--font-body);
   font-size: var(--font-size-body-lg);
   color: var(--color-muted);
   margin: 0;
   line-height: var(--line-height-body);
   max-width: 52rem;
-  margin: 0 auto;
 }
 
 /* ─── Stats ──────────────────────────── */
@@ -59,8 +92,10 @@
 }
 
 .statCard {
-  background-color: var(--color-bg);
-  border: 1px solid var(--color-border);
+  background: var(--color-surface-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-lg);
   padding: var(--space-6);
   display: flex;
@@ -68,16 +103,28 @@
   align-items: center;
   gap: var(--space-2);
   text-align: center;
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.statCard:hover {
+  border-color: rgba(232, 119, 34, 0.25);
+  box-shadow: var(--glow-card);
 }
 
 .statValue {
+  font-family: var(--font-display);
   font-size: var(--font-size-h2);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-primary);
+  font-weight: 700;
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   line-height: 1;
+  letter-spacing: -0.03em;
 }
 
 .statLabel {
+  font-family: var(--font-body);
   font-size: var(--font-size-small);
   color: var(--color-muted);
   line-height: 1.4;
@@ -93,6 +140,7 @@
 }
 
 .congressoLabel {
+  font-family: var(--font-body);
   font-size: var(--font-size-small);
   color: var(--color-muted);
 }
@@ -103,9 +151,11 @@
 }
 
 .congressoBadge {
-  padding: var(--space-1) var(--space-4);
-  border: 1px solid var(--color-border);
+  padding: var(--space-2) var(--space-4);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255,255,255,0.12);
   border-radius: var(--radius-full);
+  font-family: var(--font-body);
   font-size: var(--font-size-caption);
   font-weight: var(--font-weight-semibold);
   color: var(--color-white);
@@ -132,17 +182,19 @@
   gap: var(--space-3);
   padding: var(--space-4) var(--space-8);
   background: linear-gradient(135deg, rgba(201, 168, 76, 0.1), rgba(232, 119, 34, 0.08));
-  border: 2px solid var(--color-gold);
+  border: 2px solid rgba(201, 168, 76, 0.5);
   border-radius: var(--radius-full);
 }
 
 .sealIcon { font-size: 1.5rem; }
 
 .sealText {
+  font-family: var(--font-display);
   font-size: var(--font-size-body-lg);
   font-weight: var(--font-weight-bold);
   color: var(--color-gold);
   font-style: italic;
+  letter-spacing: -0.01em;
 }
 
 /* ─── Responsive ──────────────────────── */

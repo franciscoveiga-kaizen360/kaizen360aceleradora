@@ -20,6 +20,10 @@ export function FaqSection() {
     >
       <div className={styles.container}>
         <header className={styles.header}>
+          <span className={`section-eyebrow ${styles.eyebrow}`}>
+            <span aria-hidden="true">?</span>
+            Dúvidas frequentes
+          </span>
           <h2 id="faq-heading" className={styles.title}>
             Perguntas Frequentes
           </h2>

@@ -1,3 +1,5 @@
+/* SocialProofItem.module.css */
+
 .item {
   display: flex;
   flex-direction: column;
@@ -6,15 +8,23 @@
 }
 
 .value {
+  font-family: var(--font-display);
   font-size: var(--font-size-h3);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-primary);
-  line-height: 1.2;
+  font-weight: 700;
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
 .label {
+  font-family: var(--font-body);
   font-size: var(--font-size-caption);
   color: var(--color-muted);
   text-align: center;
   line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }

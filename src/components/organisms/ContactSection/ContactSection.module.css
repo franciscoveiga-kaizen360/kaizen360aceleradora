@@ -1,6 +1,9 @@
+/* ContactSection.module.css */
+
 .section {
-  background-color: var(--color-surface);
+  background: var(--gradient-section-alt);
   padding: var(--section-padding-y) var(--section-padding-x);
+  position: relative;
   opacity: 0;
   transform: translateY(2rem);
   transition: opacity var(--transition-xslow), transform var(--transition-xslow);
@@ -18,18 +21,36 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-12);
+  position: relative;
+  z-index: 1;
 }
 
-.header { text-align: center; display: flex; flex-direction: column; gap: var(--space-4); }
+.header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.eyebrow { /* uses .section-eyebrow utility */ }
 
 .title {
+  font-family: var(--font-display);
   font-size: var(--font-size-h2);
   font-weight: var(--font-weight-bold);
   color: var(--color-white);
   margin: 0;
+  letter-spacing: -0.02em;
+  line-height: var(--line-height-heading);
 }
 
-.subtitle { font-size: var(--font-size-body-lg); color: var(--color-muted); margin: 0; }
+.subtitle {
+  font-family: var(--font-body);
+  font-size: var(--font-size-body-lg);
+  color: var(--color-muted);
+  margin: 0;
+}
 
 /* ─── Form ───────────────────────────── */
 .form { display: flex; flex-direction: column; gap: var(--space-4); }
@@ -43,6 +64,7 @@
 .field { display: flex; flex-direction: column; gap: var(--space-2); }
 
 .label {
+  font-family: var(--font-body);
   font-size: var(--font-size-small);
   font-weight: var(--font-weight-semibold);
   color: var(--color-white);
@@ -50,14 +72,16 @@
 
 .input,
 .textarea {
-  background-color: var(--color-bg);
-  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-md);
   padding: var(--space-3) var(--space-4);
+  font-family: var(--font-body);
   font-size: var(--font-size-body);
   color: var(--color-white);
-  font-family: inherit;
-  transition: border-color var(--transition-fast);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
   width: 100%;
 }
 
@@ -75,20 +99,29 @@
 
 /* ─── Submit ──────────────────────────── */
 .submitBtn {
-  background-color: var(--color-primary);
+  background: var(--gradient-brand);
   color: var(--color-white);
   border: none;
   border-radius: var(--radius-md);
   padding: var(--space-4) var(--space-8);
+  font-family: var(--font-display);
   font-size: var(--font-size-body);
   font-weight: var(--font-weight-semibold);
-  font-family: inherit;
   cursor: pointer;
-  transition: filter var(--transition-fast), transform var(--transition-fast);
+  transition:
+    filter var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
   align-self: flex-start;
+  box-shadow: var(--shadow-btn);
+  letter-spacing: -0.01em;
 }
 
-.submitBtn:hover:not(:disabled) { filter: brightness(1.1); transform: scale(1.02); }
+.submitBtn:hover:not(:disabled) {
+  filter: brightness(1.08);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-btn), var(--glow-orange-sm);
+}
 .submitBtn:disabled { opacity: 0.6; cursor: not-allowed; }
 
 /* ─── Messages ───────────────────────── */
@@ -97,18 +130,18 @@
   align-items: flex-start;
   gap: var(--space-4);
   padding: var(--space-6);
-  background: rgba(34, 197, 94, 0.1);
-  border: 1px solid rgba(34, 197, 94, 0.3);
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.25);
   border-radius: var(--radius-lg);
   color: var(--color-success);
 }
 
 .successIcon { font-size: 2rem; flex-shrink: 0; }
-
 .successMessage strong { display: block; margin-bottom: var(--space-1); color: var(--color-white); }
-.successMessage p { margin: 0; font-size: var(--font-size-small); }
+.successMessage p { margin: 0; font-family: var(--font-body); font-size: var(--font-size-small); }
 
 .errorMessage {
+  font-family: var(--font-body);
   color: var(--color-error);
   font-size: var(--font-size-small);
   padding: var(--space-3) var(--space-4);

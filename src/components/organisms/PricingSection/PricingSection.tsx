@@ -17,6 +17,10 @@ export function PricingSection() {
     >
       <div className={styles.container}>
         <header className={styles.header}>
+          <span className={`section-eyebrow ${styles.eyebrow}`}>
+            <span aria-hidden="true">◈</span>
+            Planos & Preços
+          </span>
           <h2 id="pricing-heading" className={styles.title}>
             Escolha o plano ideal para sua clínica
           </h2>

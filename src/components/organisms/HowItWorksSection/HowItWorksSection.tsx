@@ -17,6 +17,10 @@ export function HowItWorksSection() {
     >
       <div className={styles.container}>
         <header className={styles.header}>
+          <span className={`section-eyebrow ${styles.eyebrow}`}>
+            <span aria-hidden="true">⟳</span>
+            Como funciona
+          </span>
           <h2 id="how-it-works-heading" className={styles.title}>
             Em 3 passos, sua clínica opera no automático
           </h2>

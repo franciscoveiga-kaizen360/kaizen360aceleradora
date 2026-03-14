@@ -1,30 +1,58 @@
+/* PricingPlanCard.module.css — Premium glassmorphism pricing cards */
+
 .card {
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
+  background: var(--color-surface-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-xl);
   padding: var(--space-8);
   display: flex;
   flex-direction: column;
   gap: var(--space-6);
-  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+  position: relative;
+  overflow: hidden;
+  transition:
+    border-color var(--transition-base),
+    box-shadow var(--transition-base),
+    transform var(--transition-base);
+}
+
+/* Top shine line */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.14), transparent);
+  pointer-events: none;
 }
 
 .card:hover {
-  border-color: rgba(232, 119, 34, 0.4);
-  box-shadow: var(--shadow-hover);
+  border-color: rgba(232, 119, 34, 0.3);
+  box-shadow: var(--glow-card-hover);
+  transform: translateY(-4px);
 }
 
 .highlighted {
-  border-color: var(--color-primary);
+  border-color: rgba(232, 119, 34, 0.5);
   background: linear-gradient(
     160deg,
-    rgba(232, 119, 34, 0.08) 0%,
-    var(--color-surface) 40%
+    rgba(232, 119, 34, 0.10) 0%,
+    rgba(232, 119, 34, 0.04) 30%,
+    var(--color-surface-glass) 60%
   );
 }
 
+.highlighted::before {
+  background: linear-gradient(90deg, transparent, rgba(232, 119, 34, 0.4), transparent);
+}
+
 .highlighted:hover {
-  box-shadow: 0 8px 40px rgba(232, 119, 34, 0.3);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(232, 119, 34, 0.5), var(--glow-orange-md);
+  transform: translateY(-6px);
 }
 
 /* ─── Header ─────────────────────────── */
@@ -35,23 +63,27 @@
 }
 
 .name {
+  font-family: var(--font-display);
   font-size: var(--font-size-h3);
   font-weight: var(--font-weight-bold);
   color: var(--color-white);
   margin: 0;
   line-height: var(--line-height-heading);
+  letter-spacing: -0.02em;
 }
 
 .subtitle {
+  font-family: var(--font-body);
   font-size: var(--font-size-small);
   font-weight: var(--font-weight-semibold);
   color: var(--color-primary);
   margin: 0;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
 }
 
 .description {
+  font-family: var(--font-body);
   font-size: var(--font-size-small);
   color: var(--color-muted);
   margin: 0;
@@ -63,7 +95,7 @@
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   border-radius: var(--radius-md);
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .table {
@@ -74,25 +106,27 @@
 }
 
 .th {
-  background-color: var(--color-surface-alt);
+  background: rgba(255, 255, 255, 0.04);
   color: var(--color-muted);
+  font-family: var(--font-body);
   font-weight: var(--font-weight-semibold);
   text-align: left;
   padding: var(--space-3) var(--space-4);
   font-size: var(--font-size-caption);
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.08em;
   white-space: nowrap;
 }
 
 .row:nth-child(even) {
-  background-color: rgba(255, 255, 255, 0.02);
+  background: rgba(255, 255, 255, 0.02);
 }
 
 .td {
+  font-family: var(--font-body);
   color: var(--color-white);
   padding: var(--space-3) var(--space-4);
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
   white-space: nowrap;
 }
 
@@ -103,7 +137,7 @@
 
 .bonus {
   font-size: var(--font-size-caption);
-  color: var(--color-gold);
+  color: var(--color-gold-light);
   font-weight: normal;
 }
 
@@ -113,9 +147,10 @@
   flex-direction: column;
   gap: var(--space-1);
   padding: var(--space-3) var(--space-4);
-  background-color: rgba(201, 168, 76, 0.08);
+  background: rgba(201, 168, 76, 0.07);
   border: 1px solid rgba(201, 168, 76, 0.2);
   border-radius: var(--radius-md);
+  font-family: var(--font-body);
   font-size: var(--font-size-caption);
   color: var(--color-gold);
 }

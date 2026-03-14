@@ -1,24 +1,23 @@
+/* SolutionSection.module.css */
+
 .section {
   background-color: var(--color-bg);
   padding: var(--section-padding-y) var(--section-padding-x);
-  opacity: 0;
-  transform: translateY(2rem);
-  transition:
-    opacity var(--transition-xslow),
-    transform var(--transition-xslow);
+  position: relative;
+  overflow: hidden;
 }
 
-.section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .section {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
+/* Ambient orange glow bottom-right */
+.section::after {
+  content: '';
+  position: absolute;
+  bottom: -8rem;
+  right: -8rem;
+  width: 36rem;
+  height: 36rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232, 119, 34, 0.07) 0%, transparent 65%);
+  pointer-events: none;
 }
 
 .container {
@@ -27,34 +26,46 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-12);
+  position: relative;
+  z-index: 1;
 }
 
 .header {
   text-align: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: var(--space-4);
 }
 
+.eyebrow {
+  /* uses .section-eyebrow utility from globals */
+}
+
 .title {
+  font-family: var(--font-display);
   font-size: var(--font-size-h2);
   font-weight: var(--font-weight-bold);
   color: var(--color-white);
   margin: 0;
   line-height: var(--line-height-heading);
+  letter-spacing: -0.02em;
+  max-width: 36rem;
 }
 
 .subtitle {
+  font-family: var(--font-body);
   font-size: var(--font-size-body-lg);
   color: var(--color-muted);
   margin: 0;
   line-height: var(--line-height-body);
+  max-width: 40rem;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-6);
+  gap: var(--space-5);
   list-style: none;
   margin: 0;
   padding: 0;

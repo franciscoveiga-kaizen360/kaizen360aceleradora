@@ -1,24 +1,22 @@
+/* ProblemSection.module.css */
+
 .section {
-  background-color: var(--color-surface);
+  background: var(--gradient-section-alt);
   padding: var(--section-padding-y) var(--section-padding-x);
-  opacity: 0;
-  transform: translateY(2rem);
-  transition:
-    opacity var(--transition-xslow),
-    transform var(--transition-xslow);
+  position: relative;
+  overflow: hidden;
 }
 
-.section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .section {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
+/* Top gradient fade from hero */
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+  pointer-events: none;
 }
 
 .container {
@@ -27,34 +25,46 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-12);
+  position: relative;
+  z-index: 1;
 }
 
 .header {
   text-align: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: var(--space-4);
 }
 
+.eyebrow {
+  /* uses .section-eyebrow utility from globals */
+}
+
 .title {
+  font-family: var(--font-display);
   font-size: var(--font-size-h2);
   font-weight: var(--font-weight-bold);
   color: var(--color-white);
   margin: 0;
   line-height: var(--line-height-heading);
+  letter-spacing: -0.02em;
+  max-width: 28rem;
 }
 
 .subtitle {
+  font-family: var(--font-body);
   font-size: var(--font-size-body-lg);
   color: var(--color-muted);
   margin: 0;
   line-height: var(--line-height-body);
+  max-width: 36rem;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-6);
+  gap: var(--space-5);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -62,18 +72,20 @@
 
 .transition {
   text-align: center;
+  font-family: var(--font-body);
   font-size: var(--font-size-body-lg);
   color: var(--color-muted);
   line-height: var(--line-height-body);
   margin: 0;
   padding: var(--space-8) var(--space-12);
-  background-color: rgba(232, 119, 34, 0.06);
-  border: 1px solid rgba(232, 119, 34, 0.2);
-  border-radius: var(--radius-lg);
+  background: rgba(232, 119, 34, 0.06);
+  border: 1px solid rgba(232, 119, 34, 0.25);
+  border-radius: var(--radius-xl);
 }
 
 .transition strong {
   color: var(--color-white);
+  font-weight: var(--font-weight-semibold);
 }
 
 /* ─── Responsive ──────────────────────── */

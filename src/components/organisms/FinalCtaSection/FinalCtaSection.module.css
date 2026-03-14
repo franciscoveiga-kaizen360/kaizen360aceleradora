@@ -1,49 +1,109 @@
+/* FinalCtaSection.module.css — Dramatic dark CTA */
+
 .section {
-  background: linear-gradient(
-    135deg,
-    var(--color-bg) 0%,
-    rgba(232, 119, 34, 0.06) 50%,
-    var(--color-bg) 100%
-  );
+  background: var(--color-bg-dark);
   padding: var(--space-32) var(--section-padding-x);
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
+  position: relative;
+  overflow: hidden;
   opacity: 0;
   transform: translateY(2rem);
   transition: opacity var(--transition-xslow), transform var(--transition-xslow);
 }
 
-.section.visible { opacity: 1; transform: translateY(0); }
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 @media (prefers-reduced-motion: reduce) {
   .section { opacity: 1; transform: none; transition: none; }
 }
 
+/* Background orbs */
+.section::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60rem;
+  height: 30rem;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(232, 119, 34, 0.12) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black 20%, transparent 70%);
+}
+
+/* Horizontal border accent lines */
+.borderTop,
+.borderBottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  pointer-events: none;
+}
+
+.borderTop {
+  top: 0;
+  background: linear-gradient(90deg, transparent, rgba(232, 119, 34, 0.4), rgba(255,255,255,0.1), rgba(232, 119, 34, 0.4), transparent);
+}
+
+.borderBottom {
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+}
+
 .container {
-  max-width: 44rem;
+  max-width: 48rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--space-8);
   text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  /* uses .section-eyebrow utility */
 }
 
 .title {
+  font-family: var(--font-display);
   font-size: var(--font-size-h1);
-  font-weight: var(--font-weight-bold);
+  font-weight: 700;
   color: var(--color-white);
   margin: 0;
-  line-height: var(--line-height-heading);
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.03em;
 }
 
-.accent { color: var(--color-primary); }
+.accent {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 
 .subtitle {
+  font-family: var(--font-body);
   font-size: var(--font-size-body-lg);
-  color: var(--color-muted);
+  color: var(--color-muted-light);
   margin: 0;
   line-height: var(--line-height-body);
+  max-width: 36rem;
 }
 
 .actions {
@@ -51,24 +111,50 @@
   flex-direction: column;
   align-items: center;
   gap: var(--space-4);
+  margin-top: var(--space-4);
 }
 
 .primaryBtn {
   font-size: var(--font-size-body-lg) !important;
-  padding: var(--space-4) var(--space-12) !important;
+  padding: 1.125rem 3rem !important;
+  box-shadow: var(--shadow-btn), var(--glow-orange-sm) !important;
+  animation: pulseGlow 3s ease-in-out infinite;
 }
 
 .waLink {
+  font-family: var(--font-body);
   font-size: var(--font-size-body);
   color: var(--color-whatsapp);
   text-decoration: none;
   font-weight: var(--font-weight-semibold);
   transition: opacity var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
 }
 
-.waLink:hover { opacity: 0.8; }
+.waLink:hover {
+  opacity: 0.85;
+}
+
+/* Guarantee text */
+.guarantee {
+  font-family: var(--font-body);
+  font-size: var(--font-size-small);
+  color: var(--color-muted);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.guarantee::before {
+  content: '✓';
+  color: var(--color-success);
+  font-weight: var(--font-weight-bold);
+}
 
 @media (max-width: 767px) {
-  .title { font-size: var(--font-size-h1); }
-  .primaryBtn { padding: var(--space-4) var(--space-8) !important; }
+  .title { font-size: var(--font-size-h2); }
+  .primaryBtn { padding: var(--space-4) var(--space-8) !important; font-size: var(--font-size-body) !important; }
 }

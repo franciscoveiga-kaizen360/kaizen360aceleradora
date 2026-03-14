@@ -1,31 +1,54 @@
+/* TeamMemberCard.module.css — Glassmorphism team card */
+
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--space-3);
   text-align: center;
-  padding: var(--space-6);
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  transition: border-color var(--transition-base);
+  padding: var(--space-8);
+  background: var(--color-surface-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-xl);
+  position: relative;
+  overflow: hidden;
+  transition:
+    border-color var(--transition-base),
+    box-shadow var(--transition-base),
+    transform var(--transition-base);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 15%;
+  right: 15%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
+  pointer-events: none;
 }
 
 .card:hover {
-  border-color: rgba(232, 119, 34, 0.4);
+  border-color: rgba(232, 119, 34, 0.25);
+  box-shadow: var(--glow-card-hover);
+  transform: translateY(-4px);
 }
 
 .avatar {
-  width: 5rem;
-  height: 5rem;
+  width: 5.5rem;
+  height: 5.5rem;
   border-radius: var(--radius-full);
   overflow: hidden;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-gold));
+  background: var(--gradient-brand);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  border: 2px solid rgba(232, 119, 34, 0.3);
+  border: 2px solid rgba(232, 119, 34, 0.4);
+  box-shadow: 0 0 20px rgba(232, 119, 34, 0.2);
 }
 
 .photo {
@@ -35,27 +58,35 @@
 }
 
 .initials {
+  font-family: var(--font-display);
   font-size: var(--font-size-h3);
-  font-weight: var(--font-weight-bold);
+  font-weight: 700;
   color: var(--color-white);
   line-height: 1;
+  letter-spacing: -0.02em;
 }
 
 .name {
-  font-size: var(--font-size-body);
+  font-family: var(--font-display);
+  font-size: var(--font-size-body-lg);
   font-weight: var(--font-weight-bold);
   color: var(--color-white);
   margin: 0;
+  letter-spacing: -0.01em;
 }
 
 .role {
+  font-family: var(--font-body);
   font-size: var(--font-size-small);
   font-weight: var(--font-weight-semibold);
   color: var(--color-primary);
   margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 .bio {
+  font-family: var(--font-body);
   font-size: var(--font-size-small);
   color: var(--color-muted);
   margin: 0;

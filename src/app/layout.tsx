@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Poppins } from 'next/font/google'
+import { Space_Grotesk, Inter } from 'next/font/google'
 import Script from 'next/script'
 import { GTM_ID } from '@/lib/constants'
 import { Navbar } from '@/components/organisms/Navbar/Navbar'
@@ -7,11 +7,18 @@ import '@/styles/globals.css'
 import '@/styles/tokens.css'
 import '@/styles/animations.css'
 
-const poppins = Poppins({
+const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
-  weight: ['400', '600', '700'],
+  weight: ['400', '500', '600', '700'],
   display: 'swap',
-  variable: '--font-poppins',
+  variable: '--font-display',
+})
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  display: 'swap',
+  variable: '--font-body',
 })
 
 export const metadata: Metadata = {
@@ -43,7 +50,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-BR" className={poppins.variable}>
+    <html lang="pt-BR" className={`${spaceGrotesk.variable} ${inter.variable}`}>
       <head>
         {!!GTM_ID && (
           <Script id="gtm-head" strategy="afterInteractive">

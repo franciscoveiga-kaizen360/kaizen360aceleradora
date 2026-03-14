@@ -1,6 +1,10 @@
+/* HowItWorksSection.module.css */
+
 .section {
-  background-color: var(--color-bg);
+  background: var(--gradient-section-alt);
   padding: var(--section-padding-y) var(--section-padding-x);
+  position: relative;
+  overflow: hidden;
   opacity: 0;
   transform: translateY(2rem);
   transition:
@@ -23,24 +27,34 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-12);
+  position: relative;
+  z-index: 1;
 }
 
 .header {
   text-align: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: var(--space-4);
 }
 
+.eyebrow {
+  /* uses .section-eyebrow utility */
+}
+
 .title {
+  font-family: var(--font-display);
   font-size: var(--font-size-h2);
   font-weight: var(--font-weight-bold);
   color: var(--color-white);
   margin: 0;
   line-height: var(--line-height-heading);
+  letter-spacing: -0.02em;
 }
 
 .subtitle {
+  font-family: var(--font-body);
   font-size: var(--font-size-body-lg);
   color: var(--color-muted);
   margin: 0;
@@ -64,8 +78,8 @@
   flex-shrink: 0;
   width: 4rem;
   height: 2px;
-  background: linear-gradient(90deg, var(--color-primary), rgba(232, 119, 34, 0.3));
-  margin-top: 2.5rem; /* align with center of icon circle */
+  background: linear-gradient(90deg, var(--color-primary), rgba(232, 119, 34, 0.25));
+  margin-top: 2.5rem;
   position: relative;
 }
 
@@ -96,7 +110,7 @@
   .connector {
     width: 2px;
     height: 2.5rem;
-    background: linear-gradient(180deg, var(--color-primary), rgba(232, 119, 34, 0.3));
+    background: linear-gradient(180deg, var(--color-primary), rgba(232, 119, 34, 0.25));
     margin-top: 0;
     margin-left: 50%;
   }

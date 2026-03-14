@@ -35,6 +35,10 @@ export function TestimonialsSection() {
     >
       <div className={styles.container}>
         <header className={styles.header}>
+          <span className={`section-eyebrow ${styles.eyebrow}`}>
+            <span aria-hidden="true">★</span>
+            Depoimentos
+          </span>
           <h2 id="testimonials-heading" className={styles.title}>
             O que dizem nossos parceiros
           </h2>
