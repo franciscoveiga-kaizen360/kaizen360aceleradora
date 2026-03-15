@@ -49,7 +49,7 @@ function maskWhatsApp(value: string): string {
 
 function toInternational(masked: string): string {
   const digits = masked.replace(/\D/g, '')
-  return `+55${digits}`
+  return `55${digits}`
 }
 
 // ─── Animation variants ──────────────────────────
