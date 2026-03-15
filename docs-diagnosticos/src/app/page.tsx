@@ -473,7 +473,6 @@ export default function DiagnosticoPage() {
                         onClick={() => setField('perfil', opt.value)}
                         icon={opt.icon}
                         label={opt.label}
-                        desc={opt.desc}
                       />
                     ))}
                   </div>
