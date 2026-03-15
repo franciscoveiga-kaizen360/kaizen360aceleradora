@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { getResultado } from '@/lib/db'
 import styles from './page.module.css'
 
@@ -80,6 +81,7 @@ export default async function ResultadoPage({ searchParams }: PageProps) {
       {/* Header */}
       <header className={styles.header}>
         <Link href="/" className={styles.logo}>
+          <Image src="/logo.png" alt="DOCS Consultoria" width={36} height={36} style={{ display: 'inline-block', verticalAlign: 'middle', marginRight: 8 }} />
           DOCS <span className={styles.logoAccent}>Consultoria</span>
         </Link>
         <div className={styles.headerAction}>

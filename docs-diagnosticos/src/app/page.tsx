@@ -3,6 +3,7 @@
 import { useState, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { AnimatePresence, motion } from 'framer-motion'
+import Image from 'next/image'
 import type {
   Perfil,
   TempoAtuacao,
@@ -327,6 +328,7 @@ export default function DiagnosticoPage() {
       {/* Header */}
       <header className={styles.header}>
         <span className={styles.logo}>
+          <Image src="/logo.png" alt="DOCS Consultoria" width={36} height={36} style={{ display: 'inline-block', verticalAlign: 'middle', marginRight: 8 }} />
           DOCS <span className={styles.logoAccent}>Consultoria</span>
         </span>
         {step > 0 && (
