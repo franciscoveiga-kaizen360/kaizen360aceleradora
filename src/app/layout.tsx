@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import { Space_Grotesk, Inter } from 'next/font/google'
 import Script from 'next/script'
 import { GTM_ID } from '@/lib/constants'
-import { Navbar } from '@/components/organisms/Navbar/Navbar'
 import '@/styles/globals.css'
 import '@/styles/tokens.css'
 import '@/styles/animations.css'
@@ -73,7 +72,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             />
           </noscript>
         )}
-        <Navbar />
         {children}
       </body>
     </html>
