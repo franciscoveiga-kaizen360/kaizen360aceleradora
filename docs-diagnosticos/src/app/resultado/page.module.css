@@ -328,23 +328,54 @@
 
 /* ─── Responsive ──────────────────────────────── */
 @media (max-width: 640px) {
+  .main {
+    padding: var(--space-8) var(--space-4) var(--space-12);
+  }
+
   .heroCard {
-    padding: var(--space-6);
-  }
-
-  .sectionBlock {
-    padding: var(--space-5);
-  }
-
-  .focusCard {
-    padding: var(--space-4) var(--space-5);
-  }
-
-  .ctaArea {
     padding: var(--space-6);
   }
 
   .headline {
     font-size: var(--font-size-h4);
+  }
+
+  .sectionBlock {
+    padding: var(--space-5) var(--space-5) var(--space-6);
+  }
+
+  .sectionTag {
+    margin-bottom: var(--space-4);
+  }
+
+  .focusSection {
+    margin-top: 1.5rem;
+  }
+
+  .focusSectionTitle {
+    font-size: 1rem;
+    margin-bottom: var(--space-3);
+  }
+
+  .focusCard {
+    padding: var(--space-4);
+    gap: var(--space-3);
+  }
+
+  .ctaArea {
+    padding: var(--space-6) var(--space-5);
+  }
+
+  .ctaTitle {
+    font-size: 1.125rem;
+  }
+
+  .header {
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .perfilBadge {
+    font-size: 0.6875rem;
+    padding: var(--space-1) var(--space-3);
   }
 }
