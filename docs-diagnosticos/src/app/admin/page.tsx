@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { getAllDiagnosticos } from '@/lib/db'
 
 export const metadata: Metadata = {
@@ -56,12 +57,15 @@ export default async function AdminPage() {
     <div style={{ minHeight: '100vh', background: '#0f1117', color: '#e8e8e8', fontFamily: 'system-ui, sans-serif' }}>
 
       {/* Header */}
-      <header style={{ borderBottom: '1px solid #1e2130', padding: '1rem 2rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        <div>
-          <span style={{ fontWeight: 700, fontSize: '1.1rem', color: '#fff' }}>DOCS <span style={{ color: '#4f8ef7' }}>Consultoria</span></span>
-          <span style={{ marginLeft: '1rem', color: '#666', fontSize: '0.875rem' }}>Painel de Diagnósticos</span>
+      <header style={{ borderBottom: '1px solid rgba(255,255,255,0.06)', padding: '1rem 2rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: 'rgba(11,11,24,0.85)', backdropFilter: 'blur(12px)', position: 'sticky', top: 0, zIndex: 100 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+          <Image src="/logo.png" alt="DOCS Consultoria" width={36} height={36} />
+          <div>
+            <span style={{ fontWeight: 700, fontSize: '1.1rem', color: '#fff', letterSpacing: '-0.02em' }}>DOCS <span style={{ color: '#E87722' }}>Consultoria</span></span>
+            <span style={{ display: 'block', color: '#8892A4', fontSize: '0.75rem', letterSpacing: '0.06em', textTransform: 'uppercase', marginTop: '1px' }}>Painel de Diagnósticos</span>
+          </div>
         </div>
-        <span style={{ background: '#1e2130', borderRadius: '999px', padding: '0.25rem 0.75rem', fontSize: '0.8rem', color: '#aaa' }}>
+        <span style={{ background: 'rgba(232,119,34,0.1)', border: '1px solid rgba(232,119,34,0.25)', borderRadius: '999px', padding: '0.25rem 0.875rem', fontSize: '0.8rem', color: '#E87722', fontWeight: 600 }}>
           {leads.length} {leads.length === 1 ? 'resposta' : 'respostas'}
         </span>
       </header>
