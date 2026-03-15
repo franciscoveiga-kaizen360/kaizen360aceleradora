@@ -4,8 +4,20 @@ import Image from 'next/image'
 import { getAllDiagnosticos } from '@/lib/db'
 
 export const metadata: Metadata = {
-  title: 'Painel Admin — DOCS Consultoria',
+  title: 'Painel de Administrador de Diagnósticos — DOCS Consultoria',
+  description: 'Painel interno de visualização dos diagnósticos recebidos.',
   robots: { index: false, follow: false },
+  openGraph: {
+    title: 'Painel de Administrador de Diagnósticos — DOCS Consultoria',
+    description: 'Painel interno de visualização dos diagnósticos recebidos.',
+    url: 'https://docs-diagnostico-crescimento.vercel.app/admin',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Painel de Administrador de Diagnósticos — DOCS Consultoria',
+    description: 'Painel interno de visualização dos diagnósticos recebidos.',
+  },
 }
 
 export const revalidate = 0
