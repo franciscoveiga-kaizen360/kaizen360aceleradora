@@ -13,6 +13,8 @@ function buildPayload(answers: QuizAnswers, resultado: Resultado): DocsGrowthPay
     'diagnostico-docs-2026',
     answers.perfil === 'dentista' ? 'perfil:dentista' : 'perfil:radiologia',
     `maturidade:${answers.momento_maturidade}`,
+    `dor:${answers.dor_principal}`,
+    `objetivo:${answers.objetivo_principal}`,
     answers.aceita_receber_material ? 'aceita-material' : 'nao-aceita-material',
   ]
 
