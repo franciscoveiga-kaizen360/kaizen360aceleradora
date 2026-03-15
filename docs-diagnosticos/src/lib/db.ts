@@ -97,6 +97,12 @@ async function pgGet(id: string): Promise<DiagnosticoRow | null> {
   return (rows[0] as DiagnosticoRow) ?? null
 }
 
+async function pgGetAll(): Promise<DiagnosticoRow[]> {
+  const { sql } = await import('@vercel/postgres')
+  const { rows } = await sql`SELECT * FROM diagnosticos ORDER BY submitted_at DESC`
+  return rows as DiagnosticoRow[]
+}
+
 // ─── Mock helpers ────────────────────────────────────────────────────────────
 
 function mockSave(answers: QuizAnswers, resultado: Resultado): void {
@@ -137,6 +143,12 @@ function mockGet(id: string): DiagnosticoRow | null {
   return mockStore.get(id) ?? null
 }
 
+function mockGetAll(): DiagnosticoRow[] {
+  return Array.from(mockStore.values()).sort(
+    (a, b) => new Date(b.submitted_at).getTime() - new Date(a.submitted_at).getTime()
+  )
+}
+
 // ─── Public API ──────────────────────────────────────────────────────────────
 
 export async function saveRespostas(answers: QuizAnswers, resultado: Resultado): Promise<void> {
@@ -160,4 +172,11 @@ export async function getResultado(id: string): Promise<DiagnosticoRow | null> {
     return pgGet(id)
   }
   return mockGet(id)
+}
+
+export async function getAllDiagnosticos(): Promise<DiagnosticoRow[]> {
+  if (isPostgresConfigured) {
+    return pgGetAll()
+  }
+  return mockGetAll()
 }
