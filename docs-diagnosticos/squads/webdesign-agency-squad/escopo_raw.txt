@@ -1,0 +1,231 @@
+DOCS GROWTH CRM
+CRM com IA para Radiologia Odontológica
+
+ESCOPO COMPLETO DO SITE
+Briefing para Desenvolvimento pelo Squad de Web Design
+
+Preparado por: Kaizen360 Aceleradora
+Cliente: Docs Consultoria e Gestão
+Data: Março de 2026
+Versão: 1.0
+
+1. Visão Geral do Projeto
+1.1 O Produto
+Docs Growth CRM é uma plataforma de CRM com Inteligência Artificial desenvolvida exclusivamente para clínicas de radiologia odontológica. Trata-se de uma solução white label da Logyca Tecnologia, customizada e comercializada sob a marca Docs Consultoria e Gestão.
+A plataforma resolve as principais dores operacionais de clínicas radiologógicas: atendimento fragmentado, falta de CRM, processos manuais, ausência de métricas, e perda de dentistas indicadores por falta de follow-up.
+1.2 Os Stakeholders
+Docs Consultoria e Gestão: Detentora da marca, força comercial, +200 clínicas parceiras, +21 anos de experiência no nicho. Liderada pelo Dr. Fabio Guimarães, Francisco Júnior e Letícia Botti.
+Kaizen360 Aceleradora: Parceira técnica e operacional. Responsável por toda entrega, implementação, suporte, manutenção da plataforma e desenvolvimento do site.
+Logyca Tecnologia: Fornecedora da infraestrutura white label (CRM, omnichannel, IA autônoma, construtor de fluxos).
+1.3 Objetivo do Site
+Vender assinaturas do Docs Growth CRM diretamente pelo site, com modelo híbrido: preços visíveis nos planos + CTA principal de &quot;Agendar Demonstração Gratuita&quot; para cada plano. O time comercial da Docs conduz a demo e fecha a venda.
+1.4 Público-Alvo
+Gestores e administradores de clínicas de radiologia odontológica em todo o Brasil. Perfil: profissionais que enfrentam desafios de gestão, atendimento, captação de dentistas indicadores e escala do negócio.
+1.5 Identidade Visual
+Cores primárias: Laranja (#E87722), Preto (#1A1A2E), Branco (#FFFFFF)
+Cores secundárias: Dourado (detalhes premium), Cinza escuro (textos)
+Estilo: Dark mode predominante (mesma linha da Docs Consultoria), moderno, tecnológico, premium
+Tipografia: Moderna e profissional (sugestão: Poppins ou similar)
+Referências visuais: Sites docsconsultoria.com e logycatecnologia.com.br
+
+2. Dores do Público-Alvo (Base para Copy)
+Mapeamento completo das dores reais extraídas dos documentos SPIN Selling, Mentoria 12 Pilares e pesquisa de mercado. Essas dores devem guiar toda a copywriting do site.
+2.1 Dores Financeiras
+Precificação errada — não sabem se estão deixando dinheiro na mesa
+Sem controle de CAC, ticket médio, taxa de retenção ou lucratividade real
+Gestão financeira no &quot;achismo&quot; — sem dashboards ou relatórios em tempo real
+Faturamento imprevisível e sem recorrência estruturada
+2.2 Dores Operacionais
+Dono é &quot;empresidiário&quot; — trabalha demais, não consegue tirar férias
+Agenda mal gerida: faltas, horários ociosos, atrasos constantes
+Zero automação: tudo manual, gerando retrabalho e erros
+Processos não documentados — clínica depende de &quot;pessoas-chave&quot;
+Equipe desmotivada, alta rotatividade, falta de engajamento
+2.3 Dores Comerciais
+Follow-up inexistente com dentistas que indicam pacientes
+Captação de novos dentistas parceiros sem processo estruturado
+Dados espalhados em WhatsApp, cadernos, planilhas — sem CRM
+Sem marketing digital ativo — presença online fraca
+Atendimento despadronizado e lento — paciente espera demais
+2.4 Frase-Chave do Público
+&quot;Mais de 80% dos dentistas radiologistas necessitam aprender gestão. Ou aprende ou vai trabalhar para quem sabe.&quot; — Extraído do documento SPIN Selling da Docs Consultoria.
+
+3. Arquitetura do Site (Seções)
+O site será uma landing page longa (one-page) com âncoras de navegação. Estrutura otimizada para conversão, seguindo a jornada: Problema → Solução → Prova → Oferta → Ação.
+Seção 1 — Hero (Impacto Inicial)
+Objetivo: Prender atenção em 3 segundos
+Headline principal: &quot;Sua clínica de radiologia merece uma gestão inteligente. Conheça o CRM com IA feito exclusivamente para você.&quot;
+Sub-headline: &quot;Atendimento omnichannel, pipeline de dentistas, agente de IA 24h e métricas em tempo real. Tudo numa só plataforma.&quot;
+CTA primário: &quot;Agendar Demonstração Gratuita&quot; (botão laranja)
+CTA secundário: &quot;Ver Planos e Preços&quot; (âncora para seção de preços)
+Elementos visuais: Mockup da plataforma em notebook/celular, selo &quot;Feito para Radiologia Odontológica&quot;, badge &quot;Powered by Docs Consultoria&quot;
+Prova social rápida: &quot;+ de 200 clínicas confiam na Docs&quot; | &quot;100% NPS&quot; | &quot;21 anos de experiência no mercado&quot;
+Seção 2 — O Problema (Gerar Identificação)
+Objetivo: Fazer o gestor sentir a dor
+Título sugerido: &quot;Sua clínica sofre com isso?&quot;
+Apresentar de 4 a 6 cards com as dores mapeadas na Seção 2 deste documento, usando ícones e frases curtas. Exemplos:
+&quot;Seus dados de pacientes estão espalhados entre WhatsApp, cadernos e planilhas?&quot;
+&quot;Você não consegue tirar férias sem medo da clínica parar?&quot;
+&quot;Dentistas indicadores somem e você não faz follow-up?&quot;
+&quot;Sua equipe atende no WhatsApp sem padrão e sem histórico?&quot;
+&quot;Você não sabe seu CAC, ticket médio ou taxa de retenção?&quot;
+&quot;Você é um empresidiário do próprio negócio?&quot;
+Fechar com frase de transição: &quot;Se você se identificou com pelo menos 2 dessas situações, o Docs Growth CRM foi feito pra você.&quot;
+Seção 3 — A Solução (Funcionalidades)
+Objetivo: Mostrar o que a plataforma faz
+Título sugerido: &quot;Tudo que sua clínica precisa numa só plataforma&quot;
+Apresentar as funcionalidades em cards visuais ou grid com ícones:
+Funcionalidade 1: Atendimento Omnichannel
+WhatsApp, Instagram, Facebook e Webchat centralizados. Histórico completo por paciente e canal. Controle de performance por operador.
+Funcionalidade 2: CRM Completo e Visual
+Pipeline em Kanban com etapas customizáveis. Gestão de leads, oportunidades e tarefas. Relatórios e dashboards de performance em tempo real.
+Funcionalidade 3: Agente Autônomo de IA
+IA que atende, faz follow-up, move leads no pipeline e executa regras comerciais 24 horas por dia. Diferencial exclusivo da plataforma.
+Funcionalidade 4: Construtor de Fluxos
+Funis de vendas e jornadas personalizadas. Gatilhos por comportamento e interação. Automações de atendimento omnichannel.
+Funcionalidade 5: Agendamentos Inteligentes
+Agenda online integrada ao CRM. Distribuição automática de leads. Confirmações e lembretes automáticos.
+Funcionalidade 6: Disparos em Massa
+Campanhas segmentadas para dentistas indicadores. Controle de entregabilidade e comportamento.
+Funcionalidade 7: Social Media Suite
+Agendamento de postagens, gestão de conteúdo e relatórios de redes sociais integrados.
+Seção 4 — Quem Somos (Autoridade)
+Objetivo: Gerar confiança e credibilidade
+Título sugerido: &quot;Criado por quem entende de Radiologia Odontológica&quot;
+Apresentar a Docs Consultoria como a força por trás do produto:
++200 clínicas parceiras em todo o Brasil. +21 anos de experiência prática no mercado de radiologia. 100% de NPS na última pesquisa de satisfação. Mentoria 12 Pilares com turmas esgotadas. Presença em congressos nacionais (CONABRO, ABRO).
+Fotos da equipe (Dr. Fabio Guimarães, Francisco Júnior, Letícia Botti) e selo &quot;Só ensina quem faz!&quot;.
+Seção 5 — Como Funciona (Jornada Simples)
+Objetivo: Eliminar barreira de complexidade
+Título sugerido: &quot;Em 3 passos, sua clínica opera no automático&quot;
+Passo 1 — Agende sua demonstração gratuita: Conheça a plataforma ao vivo com nosso especialista.
+Passo 2 — Implementação guiada: Nossa equipe configura tudo pra você em poucos dias. Treinamento completo incluso.
+Passo 3 — Sua clínica no piloto automático: Atendimento, follow-up e gestão rodando 24h com IA.
+Seção 6 — Planos e Preços
+Objetivo: Apresentar opções claras e converter
+Título sugerido: &quot;Escolha o plano ideal para sua clínica&quot;
+
+Módulo Essencial — CRM Completo
+Para clínicas que querem organizar atendimento e gestão de leads.
+Contas
+Mensal
+Semestral
+Anual
+1 conta
+R$ 297/mês
+R$ 1.485 (5+1)
+R$ 2.970 (10+2)
+2 contas
+R$ 534/mês
+R$ 2.670
+R$ 5.340
+3 contas
+R$ 756/mês
+R$ 3.780
+R$ 7.560
+5 contas
+R$ 1.110/mês
+R$ 5.550
+R$ 11.100
+7 contas
+R$ 1.379/mês
+R$ 6.895
+R$ 13.790
+
+Módulo Intermediário — CRM + Automação de Atendimento
+Para clínicas que querem automatizar atendimento e qualificação de leads.
+Contas
+Mensal
+Semestral
+Anual
+1 conta
+R$ 697/mês
+R$ 3.485 (5+1)
+R$ 6.970 (10+2)
+2 contas
+R$ 1.254/mês
+R$ 6.270
+R$ 12.540
+3 contas
+R$ 1.776/mês
+R$ 8.880
+R$ 17.760
+5 contas
+R$ 2.610/mês
+R$ 13.050
+R$ 26.100
+7 contas
+R$ 3.164/mês
+R$ 15.820
+R$ 31.640
+
+Módulo Avançado — CRM + IA Completa
+Para clínicas que querem operação 100% automatizada com IA de atendimento, agendamento e follow-up.
+Mensal
+Semestral
+Anual
+R$ 1.497/mês
+R$ 7.485 (5+1)
+R$ 14.970 (10+2)
+
+Taxa de Implementação + Treinamento (única)
+Faixa de Contas
+Valor
+1 a 2 contas
+R$ 997
+3 a 5 contas
+R$ 1.497
+6 a 10 contas
+R$ 1.997
+
+Cada plano deve ter CTA: &quot;Agendar Demonstração Gratuita&quot;. O plano Intermediário deve ter destaque visual como &quot;Mais Popular&quot;. O plano Avançado com selo &quot;Recomendado&quot;.
+Semestral: Pague 5 meses, ganhe 1 mês de bônus. Anual: Pague 10 meses, ganhe 2 meses de bônus. Destacar a economia.
+Seção 7 — Depoimentos / Prova Social
+Objetivo: Reforçar confiança
+Título sugerido: &quot;O que dizem nossos parceiros&quot;
+Carrossel com depoimentos de clínicas que já usam a mentoria/consultoria da Docs. Se ainda não houver depoimentos específicos do CRM, usar depoimentos da mentoria 12 Pilares adaptados. Incluir: foto, nome, clínica, cidade e frase curta.
+Seção 8 — FAQ
+Objetivo: Eliminar objeções
+Título sugerido: &quot;Perguntas Frequentes&quot;
+Perguntas sugeridas baseadas nas objeções do SPIN Selling:
+P: &quot;Funciona só para radiologia?&quot; R: Foi desenvolvido especificamente para clínicas de radiologia odontológica, mas funciona para qualquer clínica odontológica.
+P: &quot;Preciso de conhecimento técnico?&quot; R: Não. Nossa equipe faz toda a implementação e treinamento. Em poucos dias sua clínica está operando.
+P: &quot;Quanto tempo leva a implementação?&quot; R: O setup completo ocorre em poucos dias, incluindo configurações, integrrações e treinamento da equipe.
+P: &quot;Posso cancelar a qualquer momento?&quot; R: Sim. Sem multas, sem fidelidade. Você fica porque quer, não porque está amarrado.
+P: &quot;A IA substitui minha equipe?&quot; R: Não. A IA potencializa sua equipe, cuidando de tarefas repetitivas 24h enquanto seu time foca no que importa.
+P: &quot;E se o preço não caber no meu orçamento?&quot; R: O investimento mensal é menor que o preço de 3 tomografias de 2 arcadas. O retorno vem no primeiro mês.
+Seção 9 — CTA Final
+Objetivo: Último empurrão para conversão
+Título sugerido: &quot;Pare de ser empresidiário. Comece a ser empresário.&quot;
+Sub-título: &quot;Agende sua demonstração gratuita e veja sua clínica operar no automático.&quot;
+Botão grande: &quot;Quero Minha Demonstração Gratuita&quot; + link WhatsApp secundário.
+Seção 10 — Rodapé
+Logo Docs Growth CRM + Logo Docs Consultoria. Links: Política de Privacidade, Termos de Uso. Contato: telefone, e-mail, Instagram (@docsconsultoria). Endereço se aplicável. Badge &quot;Powered by Docs Consultoria&quot;.
+
+4. Requisitos Técnicos
+4.1 Tecnologia
+Site responsivo (mobile-first), carregamento rápido, SEO otimizado. HTML5/CSS3/JS moderno. Hospedagem a definir (sugestão: Vercel, Netlify ou host próprio).
+4.2 Integações Necessárias
+Link de agendamento de demonstração (Calendly, Cal.com ou link direto da plataforma Logyca). Botão WhatsApp flutuante. Pixel do Facebook e Google Analytics/Tag Manager. Formulário de contato com envio para e-mail e/ou CRM.
+4.3 Domínio Sugerido
+docsgrowth.com.br ou growth.docsconsultoria.com (subdomínio da Docs).
+
+5. Diretrizes de Copy e Tom de Voz
+5.1 Tom
+Profissional, mas acessível. Direto ao ponto, sem jargões de TI. Empoderador (&quot;você no controle&quot;). Urgente sem ser agressivo.
+5.2 Palavras-Chave para SEO
+CRM radiologia odontológica, gestão clínica radiologia, software clínica odontológica, CRM odontologia, atendimento automático clínica, IA para clínica odontológica, agendamento inteligente radiologia.
+5.3 Gatilhos Mentais a Usar (Baseado no SPIN Selling)
+Escassez: &quot;Plano de lançamento com condições especiais&quot;. Autoridade: Docs Consultoria, 21 anos, +200 clínicas. Prova social: depoimentos, números, NPS 100%. Ponte ao futuro: &quot;Imagine tirar férias sabendo que sua clínica continua funcionando&quot;. Ancoragem: comparar com custo de consultoria tradicional (R$ 30.000) vs assinatura mensal (R$ 297).
+
+6. Cronograma Sugerido
+Fase 1 — Aprovação do escopo e definições finais (1-2 dias)
+Fase 2 — Design e prototipação das seções (3-5 dias)
+Fase 3 — Desenvolvimento do site completo (5-7 dias)
+Fase 4 — Revisão, ajustes e testes (2-3 dias)
+Fase 5 — Publicação e configuração de domínio (1 dia)
+Prazo total estimado: 12 a 18 dias úteis
+
+Docs Growth CRM — Feito por quem entende de Radiologia Odontológica.
+
+Documento preparado por Kaizen360 Aceleradora | Março 2026

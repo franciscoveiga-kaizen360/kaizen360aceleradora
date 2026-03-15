@@ -1,0 +1,230 @@
+name: webdesign-agency-squad
+version: 1.0.0
+description: "Squad de web design de nível mundial — cobre todo o ciclo de criação de sites de alta performance. Design para humanos em uma web AI-first. Referências: Clay, AKQA, Code & Theory."
+author: Squad Creator (Craft)
+license: MIT
+slashPrefix: webdesign
+
+aios:
+  minVersion: "2.1.0"
+  type: squad
+
+layers:
+  leadership:
+    - aios-master
+    - product-owner
+    - scrum-master
+    - project-manager
+  specialists:
+    - creative-director
+    - ux-researcher
+    - ux-strategist
+    - ui-designer
+    - motion-designer
+    - 3d-immersive-designer
+    - copywriter
+    - frontend-developer
+    - backend-developer
+    - ai-integration-specialist
+    - seo-geo-specialist
+    - performance-engineer
+    - accessibility-specialist
+    - qa-cro-specialist
+    - devops-engineer
+    - brand-strategist
+
+components:
+  agents:
+    # Leadership
+    - aios-master.md
+    - product-owner.md
+    - scrum-master.md
+    - project-manager.md
+    # Specialists
+    - creative-director.md
+    - ux-researcher.md
+    - ux-strategist.md
+    - ui-designer.md
+    - motion-designer.md
+    - 3d-immersive-designer.md
+    - copywriter.md
+    - frontend-developer.md
+    - backend-developer.md
+    - ai-integration-specialist.md
+    - seo-geo-specialist.md
+    - performance-engineer.md
+    - accessibility-specialist.md
+    - qa-cro-specialist.md
+    - devops-engineer.md
+    - brand-strategist.md
+
+  tasks:
+    # aios-master
+    - aios-master-define-project-scope.md
+    - aios-master-set-creative-vision.md
+    - aios-master-review-final-delivery.md
+    - aios-master-market-positioning.md
+    # product-owner
+    - po-create-product-brief.md
+    - po-manage-backlog.md
+    - po-define-acceptance-criteria.md
+    - po-validate-delivery.md
+    # scrum-master
+    - sm-run-sprint-planning.md
+    - sm-run-daily-standup.md
+    - sm-run-sprint-review.md
+    - sm-run-retrospective.md
+    - sm-remove-blockers.md
+    # project-manager
+    - pm-create-project-plan.md
+    - pm-track-progress.md
+    - pm-manage-resources.md
+    - pm-risk-management.md
+    - pm-client-reporting.md
+    # creative-director
+    - cd-set-creative-direction.md
+    - cd-review-creative-work.md
+    - cd-curate-references.md
+    - cd-ensure-brand-consistency.md
+    # ux-researcher
+    - uxr-conduct-user-interviews.md
+    - uxr-create-personas.md
+    - uxr-map-user-journey.md
+    - uxr-competitive-benchmarking.md
+    - uxr-run-usability-tests.md
+    - uxr-analyze-heatmaps.md
+    # ux-strategist
+    - uxs-create-information-architecture.md
+    - uxs-design-user-flows.md
+    - uxs-create-wireframes.md
+    - uxs-prototype-in-figma.md
+    - uxs-optimize-conversion-funnel.md
+    # ui-designer
+    - uid-design-visual-identity.md
+    - uid-build-design-system.md
+    - uid-design-components.md
+    - uid-design-responsive-layouts.md
+    - uid-create-dark-mode.md
+    # motion-designer
+    - mo-design-micro-animations.md
+    - mo-create-page-transitions.md
+    - mo-design-scroll-animations.md
+    - mo-animate-hero-section.md
+    - mo-create-kinetic-typography.md
+    # 3d-immersive-designer
+    - 3d-create-3d-elements.md
+    - 3d-build-webgl-experience.md
+    - 3d-implement-ar-preview.md
+    - 3d-design-cursor-interactions.md
+    - 3d-optimize-3d-performance.md
+    # copywriter
+    - copy-write-brand-story.md
+    - copy-write-page-copy.md
+    - copy-create-headlines.md
+    - copy-write-ctas.md
+    - copy-write-ux-copy.md
+    - copy-optimize-for-geo.md
+    # frontend-developer
+    - fe-setup-project.md
+    - fe-build-components.md
+    - fe-implement-design-system.md
+    - fe-implement-animations.md
+    - fe-optimize-performance.md
+    # backend-developer
+    - be-design-api.md
+    - be-setup-database.md
+    - be-integrate-cms.md
+    - be-implement-auth.md
+    - be-integrate-services.md
+    # ai-integration-specialist
+    - ai-build-chatbot.md
+    - ai-implement-personalization.md
+    - ai-build-ai-search.md
+    - ai-setup-voice-navigation.md
+    - ai-integrate-ai-workflow.md
+    # seo-geo-specialist
+    - seo-technical-seo-audit.md
+    - seo-keyword-research.md
+    - seo-implement-schema-markup.md
+    - seo-optimize-core-web-vitals.md
+    - seo-geo-optimization.md
+    # performance-engineer
+    - perf-performance-audit.md
+    - perf-optimize-assets.md
+    - perf-implement-lazy-loading.md
+    - perf-setup-cdn.md
+    - perf-monitor-core-web-vitals.md
+    # accessibility-specialist
+    - a11y-accessibility-audit.md
+    - a11y-implement-keyboard-nav.md
+    - a11y-implement-screen-reader.md
+    - a11y-ensure-color-contrast.md
+    - a11y-automated-a11y-tests.md
+    # qa-cro-specialist
+    - qa-cross-browser-testing.md
+    - qa-responsive-testing.md
+    - qa-security-testing.md
+    - qa-setup-ab-testing.md
+    - qa-conversion-optimization.md
+    - qa-setup-analytics.md
+    # devops-engineer
+    - ops-setup-cicd.md
+    - ops-configure-hosting.md
+    - ops-setup-ssl.md
+    - ops-configure-monitoring.md
+    - ops-setup-staging.md
+    - ops-configure-backups.md
+    # brand-strategist
+    - brand-define-brand-positioning.md
+    - brand-create-brand-identity.md
+    - brand-define-tone-of-voice.md
+    - brand-create-brand-guidelines.md
+    - brand-ensure-cross-channel-consistency.md
+
+  workflows: []
+  checklists: []
+  templates: []
+  tools: []
+  scripts: []
+
+config:
+  extends: extend
+  coding-standards: config/coding-standards.md
+  tech-stack: config/tech-stack.md
+  source-tree: config/source-tree.md
+
+dependencies:
+  node:
+    - gsap
+    - framer-motion
+    - three
+    - "@splinetool/runtime"
+    - next
+    - react
+    - typescript
+    - tailwindcss
+  python: []
+  squads: []
+
+site_types:
+  - institucionais
+  - landing-pages-alta-conversao
+  - e-commerces
+  - portfolios
+  - saas
+  - marketplaces
+  - web-apps
+  - sites-imersivos-premiados
+
+tags:
+  - web-design
+  - frontend
+  - ux-ui
+  - motion
+  - 3d
+  - performance
+  - seo
+  - acessibilidade
+  - agile
+  - ai-integration
+  - world-class

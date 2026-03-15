@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls:*)",
+      "Read(//c//**)",
+      "Bash(cmd.exe /c \"dir C:\\\\\" 2>/dev/null | head -20)",
+      "Bash(cmd.exe /c \"dir \\\\\"C:\\\\Projetos Claude Code\\\\\"\" 2>&1)",
+      "Bash(cmd.exe /c \"dir \\\\\"C:\\\\Projetos Claude Code\\\\\" /b\" 2>&1)",
+      "Bash(cmd.exe /c \"cd \\\\\"C:\\\\Projetos Claude Code\\\\\" && dir /b\" 2>&1)",
+      "Bash(cmd.exe /c \"dir \\\\\"C:\\\\Projetos Claude Code\\\\src\\\\\" /b\" 2>&1)",
+      "Bash(cmd.exe /c \"dir /b /s \\\\\"C:\\\\Projetos Claude Code\\\\package.json\\\\\"\" 2>&1)",
+      "Bash(cd:*)",
+      "Bash(wc:*)",
+      "Bash(grep:*)",
+      "Bash(curl:*)",
+      "Bash(pkill:*)",
+      "WebFetch(domain:docs-diagnostico.vercel.app)"
+    ]
+  }
+}

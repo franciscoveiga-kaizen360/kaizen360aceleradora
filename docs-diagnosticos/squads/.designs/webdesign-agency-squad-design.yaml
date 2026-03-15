@@ -1,0 +1,1023 @@
+# squad-design.yaml
+# Web Design Agency Squad — Nível Mundial
+# Gerado por: @squad-creator (Craft)
+# Referências: Clay, AKQA, Code & Theory
+
+squad:
+  name: webdesign-agency-squad
+  description: "Squad de web design de nível mundial, cobrindo todo o ciclo de criação de sites de alta performance. Design para humanos em uma web AI-first."
+  domain: web-design-agency
+  philosophy: "Sites artesanalmente criados com personalidade única, que conectam emocionalmente, convertem e se destacam."
+  site_types:
+    - institucionais
+    - landing-pages-alta-conversao
+    - e-commerces
+    - blogs
+    - portfolios
+    - saas
+    - marketplaces
+    - web-apps
+    - sites-imersivos-premiados
+
+analysis:
+  entities:
+    - Cliente
+    - Brief
+    - Projeto
+    - Website
+    - Design System
+    - Design Tokens
+    - Componentes
+    - Personas
+    - Wireframe
+    - Protótipo
+    - Sitemap
+    - Brand Guidelines
+    - Animações
+    - Elementos 3D
+    - Core Web Vitals
+    - Copy
+    - CTAs
+    - Conversão
+    - Sprint
+    - Backlog
+
+  workflows:
+    - discovery-briefing
+    - brand-strategy
+    - ux-research
+    - ux-strategy
+    - ui-design
+    - motion-design
+    - 3d-immersive
+    - copywriting
+    - frontend-development
+    - backend-development
+    - ai-integration
+    - seo-geo-optimization
+    - performance-engineering
+    - accessibility-audit
+    - qa-testing
+    - devops-deploy
+    - sprint-ceremonies
+    - client-communication
+
+  integrations:
+    - Figma
+    - GSAP
+    - Framer Motion
+    - Lottie
+    - Three.js
+    - Spline
+    - WebGL
+    - React
+    - Next.js
+    - TypeScript
+    - Tailwind CSS
+    - WebAssembly
+    - Node.js
+    - Python
+    - PostgreSQL
+    - MongoDB
+    - Sanity
+    - Strapi
+    - Contentful
+    - Vercel
+    - AWS
+    - Netlify
+    - Cloudflare
+    - GA4
+    - Hotjar
+    - Google Search Console
+
+  stakeholders:
+    - Head of Digital
+    - Product Owner
+    - Scrum Master
+    - Project Manager
+    - Creative Director
+    - UX Researcher
+    - UX Strategist
+    - UI Designer
+    - Motion Designer
+    - 3D Designer
+    - Copywriter
+    - Frontend Developer
+    - Backend Developer
+    - AI Specialist
+    - SEO/GEO Specialist
+    - Performance Engineer
+    - Accessibility Specialist
+    - QA/CRO Specialist
+    - DevOps Engineer
+    - Brand Strategist
+    - Cliente
+
+recommendations:
+  template: custom
+  config_mode: extend
+
+  agents:
+    # CAMADA DE LIDERANÇA
+    - id: aios-master
+      role: "Head of Digital — visão estratégica, decisões de negócio, posicionamento de mercado, garantia de excelência"
+      layer: leadership
+      commands:
+        - define-project-scope
+        - set-creative-vision
+        - review-final-delivery
+        - market-positioning
+      confidence: 0.97
+      user_added: false
+      user_modified: false
+
+    - id: product-owner
+      role: "Voz do cliente dentro do squad — tradução de necessidades em requisitos, priorização de backlog, critérios de aceitação"
+      layer: leadership
+      commands:
+        - create-product-brief
+        - manage-backlog
+        - define-acceptance-criteria
+        - validate-delivery
+      confidence: 0.97
+      user_added: false
+      user_modified: false
+
+    - id: scrum-master
+      role: "Facilitação do fluxo ágil — remoção de obstáculos, cerimônias, melhoria contínua dos processos"
+      layer: leadership
+      commands:
+        - run-sprint-planning
+        - run-daily-standup
+        - run-sprint-review
+        - run-retrospective
+        - remove-blockers
+      confidence: 0.97
+      user_added: false
+      user_modified: false
+
+    - id: project-manager
+      role: "Gestão de cronograma, budget, recursos, riscos e comunicação formal com cliente"
+      layer: leadership
+      commands:
+        - create-project-plan
+        - track-progress
+        - manage-resources
+        - risk-management
+        - client-reporting
+      confidence: 0.97
+      user_added: false
+      user_modified: false
+
+    # CAMADA DE ESPECIALISTAS
+    - id: creative-director
+      role: "Visão criativa unificada — coordenação dos criativos, revisão de qualidade final, curadoria de referências e tendências"
+      layer: specialists
+      commands:
+        - set-creative-direction
+        - review-creative-work
+        - curate-references
+        - ensure-brand-consistency
+      confidence: 0.97
+      user_added: false
+      user_modified: false
+
+    - id: ux-researcher
+      role: "Pesquisa de público-alvo — entrevistas, testes de usabilidade, personas, heatmaps, benchmarking, A/B"
+      layer: specialists
+      commands:
+        - conduct-user-interviews
+        - create-personas
+        - map-user-journey
+        - competitive-benchmarking
+        - run-usability-tests
+        - analyze-heatmaps
+      confidence: 0.97
+      user_added: false
+      user_modified: false
+
+    - id: ux-strategist
+      role: "Arquitetura de informação — fluxos de navegação, wireframes estratégicos, prototipagem Figma, funis de conversão"
+      layer: specialists
+      commands:
+        - create-information-architecture
+        - design-user-flows
+        - create-wireframes
+        - prototype-in-figma
+        - optimize-conversion-funnel
+      confidence: 0.97
+      user_added: false
+      user_modified: false
+
+    - id: ui-designer
+      role: "Design visual de alto impacto — design systems escaláveis, design tokens, tipografia cinética, dark mode, mobile-first"
+      layer: specialists
+      commands:
+        - design-visual-identity
+        - build-design-system
+        - design-components
+        - design-responsive-layouts
+        - create-dark-mode
+      confidence: 0.97
+      user_added: false
+      user_modified: false
+
+    - id: motion-designer
+      role: "Micro-animações funcionais — transições cinematográficas, scroll animations, GSAP/Framer Motion/Lottie, motion como identidade"
+      layer: specialists
+      commands:
+        - design-micro-animations
+        - create-page-transitions
+        - design-scroll-animations
+        - animate-hero-section
+        - create-kinetic-typography
+      confidence: 0.97
+      user_added: false
+      user_modified: false
+
+    - id: 3d-immersive-designer
+      role: "Elementos 3D interativos — Three.js, Spline, WebGL, AR previews, spatial UX, experiências nível Awwwards"
+      layer: specialists
+      commands:
+        - create-3d-elements
+        - build-webgl-experience
+        - implement-ar-preview
+        - design-cursor-interactions
+        - optimize-3d-performance
+      confidence: 0.97
+      user_added: false
+      user_modified: false
+
+    - id: copywriter
+      role: "Headlines persuasivas — storytelling de marca, CTAs de alta conversão, UX writing, gatilhos mentais, GEO"
+      layer: specialists
+      commands:
+        - write-brand-story
+        - write-page-copy
+        - create-headlines
+        - write-ctas
+        - write-ux-copy
+        - optimize-for-geo
+      confidence: 0.97
+      user_added: false
+      user_modified: false
+
+    - id: frontend-developer
+      role: "HTML5, CSS3, TypeScript, React, Next.js, Tailwind — componentes reutilizáveis, design tokens, código limpo e performático"
+      layer: specialists
+      commands:
+        - setup-project
+        - build-components
+        - implement-design-system
+        - implement-animations
+        - optimize-performance
+      confidence: 0.97
+      user_added: false
+      user_modified: false
+
+    - id: backend-developer
+      role: "Node.js, Python, APIs REST/GraphQL, PostgreSQL, MongoDB, CMS headless — autenticação, integrações, infraestrutura"
+      layer: specialists
+      commands:
+        - design-api
+        - setup-database
+        - integrate-cms
+        - implement-auth
+        - integrate-services
+      confidence: 0.97
+      user_added: false
+      user_modified: false
+
+    - id: ai-integration-specialist
+      role: "Chatbots inteligentes, personalização em tempo real, interfaces adaptativas, voice navigation, AI-powered search"
+      layer: specialists
+      commands:
+        - build-chatbot
+        - implement-personalization
+        - build-ai-search
+        - setup-voice-navigation
+        - integrate-ai-workflow
+      confidence: 0.97
+      user_added: false
+      user_modified: false
+
+    - id: seo-geo-specialist
+      role: "SEO técnico completo + GEO (Generative Engine Optimization) para que assistentes de IA citem o site"
+      layer: specialists
+      commands:
+        - technical-seo-audit
+        - keyword-research
+        - implement-schema-markup
+        - optimize-core-web-vitals
+        - geo-optimization
+      confidence: 0.97
+      user_added: false
+      user_modified: false
+
+    - id: performance-engineer
+      role: "Carregamento abaixo de 2s — WebP/AVIF, lazy loading, CDN, cache, code splitting, Core Web Vitals"
+      layer: specialists
+      commands:
+        - performance-audit
+        - optimize-assets
+        - implement-lazy-loading
+        - setup-cdn
+        - monitor-core-web-vitals
+      confidence: 0.97
+      user_added: false
+      user_modified: false
+
+    - id: accessibility-specialist
+      role: "WCAG 2.2 AA/AAA — navegação por teclado, leitores de tela, contraste, voice UI, design inclusivo"
+      layer: specialists
+      commands:
+        - accessibility-audit
+        - implement-keyboard-nav
+        - implement-screen-reader
+        - ensure-color-contrast
+        - automated-a11y-tests
+      confidence: 0.97
+      user_added: false
+      user_modified: false
+
+    - id: qa-cro-specialist
+      role: "Testes cross-browser, responsividade, segurança, A/B testing, GA4, Hotjar, otimização de funis e conversão"
+      layer: specialists
+      commands:
+        - cross-browser-testing
+        - responsive-testing
+        - security-testing
+        - setup-ab-testing
+        - conversion-optimization
+        - setup-analytics
+      confidence: 0.97
+      user_added: false
+      user_modified: false
+
+    - id: devops-engineer
+      role: "CI/CD, Vercel/AWS/Netlify/Cloudflare, SSL, uptime 99.9%, staging, backups, rollback automático"
+      layer: specialists
+      commands:
+        - setup-cicd
+        - configure-hosting
+        - setup-ssl
+        - configure-monitoring
+        - setup-staging
+        - configure-backups
+      confidence: 0.97
+      user_added: false
+      user_modified: false
+
+    - id: brand-strategist
+      role: "Identidade visual completa, posicionamento de marca, tom de voz, brand guidelines, consistência entre canais"
+      layer: specialists
+      commands:
+        - define-brand-positioning
+        - create-brand-identity
+        - define-tone-of-voice
+        - create-brand-guidelines
+        - ensure-cross-channel-consistency
+      confidence: 0.97
+      user_added: false
+      user_modified: false
+
+  tasks:
+    # aios-master
+    - name: define-project-scope
+      agent: aios-master
+      entrada: [client-brief, budget, timeline, market-context]
+      saida: [project-scope-doc, go-no-go-decision, strategic-direction]
+      confidence: 0.97
+
+    - name: set-creative-vision
+      agent: aios-master
+      entrada: [project-scope, brand-references, client-goals]
+      saida: [creative-vision-doc, quality-standards, success-metrics]
+      confidence: 0.97
+
+    - name: review-final-delivery
+      agent: aios-master
+      entrada: [all-deliverables, acceptance-criteria, quality-standards]
+      saida: [approval-decision, feedback-list, sign-off-doc]
+      confidence: 0.97
+
+    - name: market-positioning
+      agent: aios-master
+      entrada: [competitive-landscape, client-differentials, target-audience]
+      saida: [positioning-strategy, market-opportunities, growth-plan]
+      confidence: 0.97
+
+    # product-owner
+    - name: create-product-brief
+      agent: product-owner
+      entrada: [client-interview, business-goals, target-audience, budget]
+      saida: [product-brief, user-stories, feature-list, priorities]
+      confidence: 0.97
+
+    - name: manage-backlog
+      agent: product-owner
+      entrada: [feature-list, sprint-capacity, business-priorities]
+      saida: [prioritized-backlog, sprint-scope, effort-estimates]
+      confidence: 0.97
+
+    - name: define-acceptance-criteria
+      agent: product-owner
+      entrada: [user-stories, technical-constraints, business-rules]
+      saida: [acceptance-criteria, definition-of-done, test-scenarios]
+      confidence: 0.97
+
+    - name: validate-delivery
+      agent: product-owner
+      entrada: [delivered-features, acceptance-criteria, client-feedback]
+      saida: [validation-report, approved-items, change-requests]
+      confidence: 0.97
+
+    # scrum-master
+    - name: run-sprint-planning
+      agent: scrum-master
+      entrada: [prioritized-backlog, team-capacity, sprint-goal]
+      saida: [sprint-backlog, task-assignments, sprint-commitment]
+      confidence: 0.97
+
+    - name: run-daily-standup
+      agent: scrum-master
+      entrada: [team-updates, blockers, sprint-progress]
+      saida: [updated-board, resolved-blockers, daily-summary]
+      confidence: 0.97
+
+    - name: run-sprint-review
+      agent: scrum-master
+      entrada: [completed-sprint, delivered-items, stakeholder-feedback]
+      saida: [sprint-review-report, demo-recording, velocity-metric]
+      confidence: 0.97
+
+    - name: run-retrospective
+      agent: scrum-master
+      entrada: [sprint-data, team-feedback, process-issues]
+      saida: [retrospective-report, action-items, process-improvements]
+      confidence: 0.97
+
+    - name: remove-blockers
+      agent: scrum-master
+      entrada: [identified-blockers, team-dependencies, external-constraints]
+      saida: [resolved-blockers, escalation-log, mitigation-actions]
+      confidence: 0.97
+
+    # project-manager
+    - name: create-project-plan
+      agent: project-manager
+      entrada: [project-scope, team-capacity, budget, deadlines]
+      saida: [project-plan, milestones, gantt-chart, budget-allocation]
+      confidence: 0.97
+
+    - name: track-progress
+      agent: project-manager
+      entrada: [sprint-data, milestones, budget-spent]
+      saida: [progress-report, variance-analysis, updated-forecast]
+      confidence: 0.97
+
+    - name: manage-resources
+      agent: project-manager
+      entrada: [project-plan, team-availability, skill-requirements]
+      saida: [resource-allocation, capacity-plan, hiring-needs]
+      confidence: 0.97
+
+    - name: risk-management
+      agent: project-manager
+      entrada: [project-plan, team-inputs, external-factors]
+      saida: [risk-register, mitigation-plan, contingency-actions]
+      confidence: 0.97
+
+    - name: client-reporting
+      agent: project-manager
+      entrada: [progress-data, milestones, budget-status, issues]
+      saida: [client-report, status-presentation, action-items]
+      confidence: 0.97
+
+    # creative-director
+    - name: set-creative-direction
+      agent: creative-director
+      entrada: [brand-brief, creative-vision, references, client-goals]
+      saida: [creative-brief, mood-board, style-guide-direction]
+      confidence: 0.97
+
+    - name: review-creative-work
+      agent: creative-director
+      entrada: [design-deliverables, creative-brief, quality-standards]
+      saida: [approved-work, revision-notes, quality-sign-off]
+      confidence: 0.97
+
+    - name: curate-references
+      agent: creative-director
+      entrada: [project-brief, industry-trends, client-preferences]
+      saida: [reference-board, trend-analysis, inspiration-deck]
+      confidence: 0.97
+
+    - name: ensure-brand-consistency
+      agent: creative-director
+      entrada: [brand-guidelines, all-deliverables, cross-channel-assets]
+      saida: [consistency-audit, corrections-list, brand-compliance-report]
+      confidence: 0.97
+
+    # ux-researcher
+    - name: conduct-user-interviews
+      agent: ux-researcher
+      entrada: [research-goals, target-audience, discussion-guide]
+      saida: [interview-recordings, key-insights, behavioral-patterns]
+      confidence: 0.97
+
+    - name: create-personas
+      agent: ux-researcher
+      entrada: [interview-insights, analytics-data, market-research]
+      saida: [persona-docs, behavioral-profiles, needs-and-goals]
+      confidence: 0.97
+
+    - name: map-user-journey
+      agent: ux-researcher
+      entrada: [personas, touchpoints, business-goals]
+      saida: [journey-maps, pain-points, opportunity-areas]
+      confidence: 0.97
+
+    - name: competitive-benchmarking
+      agent: ux-researcher
+      entrada: [competitor-list, evaluation-criteria, project-goals]
+      saida: [benchmark-report, best-practices, differentiation-opportunities]
+      confidence: 0.97
+
+    - name: run-usability-tests
+      agent: ux-researcher
+      entrada: [prototype, test-scenarios, participant-list]
+      saida: [usability-report, severity-rankings, recommended-fixes]
+      confidence: 0.97
+
+    - name: analyze-heatmaps
+      agent: ux-researcher
+      entrada: [heatmap-data, session-recordings, analytics-data]
+      saida: [behavior-analysis, ux-issues, optimization-recommendations]
+      confidence: 0.97
+
+    # ux-strategist
+    - name: create-information-architecture
+      agent: ux-strategist
+      entrada: [content-inventory, user-goals, business-goals]
+      saida: [sitemap, content-hierarchy, navigation-structure]
+      confidence: 0.97
+
+    - name: design-user-flows
+      agent: ux-strategist
+      entrada: [personas, sitemap, conversion-goals]
+      saida: [user-flow-diagrams, navigation-flows, conversion-funnels]
+      confidence: 0.97
+
+    - name: create-wireframes
+      agent: ux-strategist
+      entrada: [user-flows, content-requirements, design-constraints]
+      saida: [low-fidelity-wireframes, annotated-layouts, interaction-notes]
+      confidence: 0.97
+
+    - name: prototype-in-figma
+      agent: ux-strategist
+      entrada: [wireframes, interaction-patterns, user-flows]
+      saida: [interactive-prototype, figma-link, test-scenarios]
+      confidence: 0.97
+
+    - name: optimize-conversion-funnel
+      agent: ux-strategist
+      entrada: [funnel-data, user-behavior, business-goals]
+      saida: [optimized-funnel, cta-strategy, friction-reduction-plan]
+      confidence: 0.97
+
+    # ui-designer
+    - name: design-visual-identity
+      agent: ui-designer
+      entrada: [brand-strategy, creative-brief, references]
+      saida: [visual-identity, color-palette, typography-system, iconography]
+      confidence: 0.97
+
+    - name: build-design-system
+      agent: ui-designer
+      entrada: [visual-identity, component-inventory, design-tokens]
+      saida: [design-system, token-library, component-library-in-figma]
+      confidence: 0.97
+
+    - name: design-components
+      agent: ui-designer
+      entrada: [design-system, wireframes, interaction-patterns]
+      saida: [ui-component-library, variant-states, responsive-specs]
+      confidence: 0.97
+
+    - name: design-responsive-layouts
+      agent: ui-designer
+      entrada: [wireframes, design-system, breakpoints]
+      saida: [responsive-designs, mobile-tablet-desktop-specs, layout-grid]
+      confidence: 0.97
+
+    - name: create-dark-mode
+      agent: ui-designer
+      entrada: [design-system, color-tokens, component-library]
+      saida: [dark-mode-design, semantic-color-tokens, theme-switching-specs]
+      confidence: 0.97
+
+    # motion-designer
+    - name: design-micro-animations
+      agent: motion-designer
+      entrada: [ui-components, interaction-specs, brand-personality]
+      saida: [animation-specs, lottie-files, figma-prototype-animations]
+      confidence: 0.97
+
+    - name: create-page-transitions
+      agent: motion-designer
+      entrada: [page-structure, brand-motion-language, performance-budget]
+      saida: [transition-specs, gsap-code, framer-motion-variants]
+      confidence: 0.97
+
+    - name: design-scroll-animations
+      agent: motion-designer
+      entrada: [page-layouts, storytelling-goals, performance-budget]
+      saida: [scroll-animation-specs, gsap-scrolltrigger-code, timing-guide]
+      confidence: 0.97
+
+    - name: animate-hero-section
+      agent: motion-designer
+      entrada: [hero-design, brand-motion-language, video-assets]
+      saida: [hero-animation, video-integration-specs, fallback-static]
+      confidence: 0.97
+
+    - name: create-kinetic-typography
+      agent: motion-designer
+      entrada: [typography-system, brand-personality, key-messages]
+      saida: [kinetic-type-animations, after-effects-files, web-implementation-specs]
+      confidence: 0.97
+
+    # 3d-immersive-designer
+    - name: create-3d-elements
+      agent: 3d-immersive-designer
+      entrada: [creative-brief, brand-assets, performance-budget]
+      saida: [3d-models, spline-scenes, optimized-assets-gltf]
+      confidence: 0.97
+
+    - name: build-webgl-experience
+      agent: 3d-immersive-designer
+      entrada: [3d-assets, interaction-specs, performance-targets]
+      saida: [threejs-scene, webgl-shaders, interaction-handlers]
+      confidence: 0.97
+
+    - name: implement-ar-preview
+      agent: 3d-immersive-designer
+      entrada: [3d-product-models, ar-framework-choice, device-targets]
+      saida: [ar-experience, qr-trigger, fallback-static-view]
+      confidence: 0.97
+
+    - name: design-cursor-interactions
+      agent: 3d-immersive-designer
+      entrada: [creative-direction, interaction-map, performance-budget]
+      saida: [custom-cursor-code, gyroscope-interactions, scroll-parallax-3d]
+      confidence: 0.97
+
+    - name: optimize-3d-performance
+      agent: 3d-immersive-designer
+      entrada: [3d-scenes, performance-audit, device-targets]
+      saida: [optimized-models, lod-strategy, progressive-loading-code]
+      confidence: 0.97
+
+    # copywriter
+    - name: write-brand-story
+      agent: copywriter
+      entrada: [brand-strategy, target-audience, brand-values]
+      saida: [brand-narrative, about-page-copy, manifesto]
+      confidence: 0.97
+
+    - name: write-page-copy
+      agent: copywriter
+      entrada: [sitemap, ux-wireframes, brand-tone-of-voice]
+      saida: [all-page-copy, content-doc, copy-deck]
+      confidence: 0.97
+
+    - name: create-headlines
+      agent: copywriter
+      entrada: [page-goals, target-audience, conversion-objectives]
+      saida: [headline-variations, a-b-test-copy, headline-hierarchy]
+      confidence: 0.97
+
+    - name: write-ctas
+      agent: copywriter
+      entrada: [conversion-goals, funnel-stages, audience-psychology]
+      saida: [cta-copy, button-labels, urgency-triggers]
+      confidence: 0.97
+
+    - name: write-ux-copy
+      agent: copywriter
+      entrada: [ui-designs, user-flows, error-states]
+      saida: [microcopy, error-messages, tooltips, empty-states, onboarding-copy]
+      confidence: 0.97
+
+    - name: optimize-for-geo
+      agent: copywriter
+      entrada: [page-copy, target-keywords, ai-search-patterns]
+      saida: [geo-optimized-copy, structured-answers, citation-ready-content]
+      confidence: 0.97
+
+    # frontend-developer
+    - name: setup-project
+      agent: frontend-developer
+      entrada: [tech-stack, design-system, project-requirements]
+      saida: [project-scaffold, ci-config, coding-standards-doc]
+      confidence: 0.97
+
+    - name: build-components
+      agent: frontend-developer
+      entrada: [design-system, component-specs, responsive-layouts]
+      saida: [react-component-library, storybook, unit-tests]
+      confidence: 0.97
+
+    - name: implement-design-system
+      agent: frontend-developer
+      entrada: [figma-design-tokens, component-library, theme-specs]
+      saida: [css-variables, tailwind-config, theme-provider, dark-mode]
+      confidence: 0.97
+
+    - name: implement-animations
+      agent: frontend-developer
+      entrada: [animation-specs, gsap-code, framer-motion-variants]
+      saida: [implemented-animations, performance-tested-code, fallbacks]
+      confidence: 0.97
+
+    - name: optimize-performance
+      agent: frontend-developer
+      entrada: [performance-audit, optimization-targets, codebase]
+      saida: [optimized-bundle, lighthouse-score, performance-report]
+      confidence: 0.97
+
+    # backend-developer
+    - name: design-api
+      agent: backend-developer
+      entrada: [functional-requirements, data-models, integration-needs]
+      saida: [api-spec-openapi, graphql-schema, endpoint-documentation]
+      confidence: 0.97
+
+    - name: setup-database
+      agent: backend-developer
+      entrada: [data-models, performance-requirements, scale-estimates]
+      saida: [database-schema, migrations, seed-data, connection-config]
+      confidence: 0.97
+
+    - name: integrate-cms
+      agent: backend-developer
+      entrada: [cms-choice, content-models, frontend-requirements]
+      saida: [cms-setup, content-models, api-integration, preview-mode]
+      confidence: 0.97
+
+    - name: implement-auth
+      agent: backend-developer
+      entrada: [auth-requirements, user-roles, security-standards]
+      saida: [auth-system, jwt-config, oauth-integration, session-management]
+      confidence: 0.97
+
+    - name: integrate-services
+      agent: backend-developer
+      entrada: [integration-list, api-credentials, business-requirements]
+      saida: [payment-integration, crm-sync, email-marketing-setup, webhooks]
+      confidence: 0.97
+
+    # ai-integration-specialist
+    - name: build-chatbot
+      agent: ai-integration-specialist
+      entrada: [conversation-flows, knowledge-base, brand-voice]
+      saida: [chatbot-implementation, training-data, handoff-logic]
+      confidence: 0.97
+
+    - name: implement-personalization
+      agent: ai-integration-specialist
+      entrada: [user-segments, behavioral-data, personalization-rules]
+      saida: [personalization-engine, dynamic-content-system, ab-framework]
+      confidence: 0.97
+
+    - name: build-ai-search
+      agent: ai-integration-specialist
+      entrada: [content-index, search-requirements, ux-specs]
+      saida: [semantic-search, vector-embeddings, search-ui-integration]
+      confidence: 0.97
+
+    - name: setup-voice-navigation
+      agent: ai-integration-specialist
+      entrada: [voice-ux-specs, accessibility-requirements, browser-support]
+      saida: [voice-interface, speech-recognition-integration, voice-commands]
+      confidence: 0.97
+
+    - name: integrate-ai-workflow
+      agent: ai-integration-specialist
+      entrada: [team-workflow, ai-tool-selection, automation-goals]
+      saida: [ai-assisted-tools, workflow-automations, productivity-report]
+      confidence: 0.97
+
+    # seo-geo-specialist
+    - name: technical-seo-audit
+      agent: seo-geo-specialist
+      entrada: [website-url, crawl-data, current-rankings]
+      saida: [technical-seo-report, priority-fixes, implementation-guide]
+      confidence: 0.97
+
+    - name: keyword-research
+      agent: seo-geo-specialist
+      entrada: [business-goals, target-audience, competitor-sites]
+      saida: [keyword-strategy, content-plan, search-intent-map]
+      confidence: 0.97
+
+    - name: implement-schema-markup
+      agent: seo-geo-specialist
+      entrada: [page-types, content-models, schema-strategy]
+      saida: [json-ld-schemas, breadcrumbs, faq-markup, review-markup]
+      confidence: 0.97
+
+    - name: optimize-core-web-vitals
+      agent: seo-geo-specialist
+      entrada: [lighthouse-report, cwv-data, performance-issues]
+      saida: [cwv-optimization-plan, implemented-fixes, before-after-metrics]
+      confidence: 0.97
+
+    - name: geo-optimization
+      agent: seo-geo-specialist
+      entrada: [page-copy, ai-search-patterns, citation-opportunities]
+      saida: [geo-strategy, optimized-content, structured-data-for-ai]
+      confidence: 0.97
+
+    # performance-engineer
+    - name: performance-audit
+      agent: performance-engineer
+      entrada: [website-url, performance-goals, device-targets]
+      saida: [lighthouse-report, cwv-baseline, optimization-roadmap]
+      confidence: 0.97
+
+    - name: optimize-assets
+      agent: performance-engineer
+      entrada: [asset-inventory, size-budget, format-requirements]
+      saida: [webp-avif-assets, compression-config, image-optimization-pipeline]
+      confidence: 0.97
+
+    - name: implement-lazy-loading
+      agent: performance-engineer
+      entrada: [page-structure, asset-map, performance-budget]
+      saida: [lazy-loading-implementation, intersection-observer-config, fallbacks]
+      confidence: 0.97
+
+    - name: setup-cdn
+      agent: performance-engineer
+      entrada: [hosting-config, asset-types, geographic-distribution]
+      saida: [cdn-configuration, cache-rules, purge-strategy]
+      confidence: 0.97
+
+    - name: monitor-core-web-vitals
+      agent: performance-engineer
+      entrada: [monitoring-tools, alert-thresholds, reporting-cadence]
+      saida: [monitoring-dashboard, alert-config, performance-reports]
+      confidence: 0.97
+
+    # accessibility-specialist
+    - name: accessibility-audit
+      agent: accessibility-specialist
+      entrada: [website-url, wcag-target-level, automated-scan-results]
+      saida: [a11y-audit-report, severity-rankings, remediation-plan]
+      confidence: 0.97
+
+    - name: implement-keyboard-nav
+      agent: accessibility-specialist
+      entrada: [page-structure, interactive-elements, focus-management-needs]
+      saida: [keyboard-navigation-code, focus-indicators, skip-links]
+      confidence: 0.97
+
+    - name: implement-screen-reader
+      agent: accessibility-specialist
+      entrada: [html-structure, aria-requirements, screen-reader-test-results]
+      saida: [aria-labels, semantic-html, live-regions, sr-only-content]
+      confidence: 0.97
+
+    - name: ensure-color-contrast
+      agent: accessibility-specialist
+      entrada: [design-system, color-tokens, wcag-contrast-requirements]
+      saida: [contrast-audit, updated-color-tokens, compliant-palette]
+      confidence: 0.97
+
+    - name: automated-a11y-tests
+      agent: accessibility-specialist
+      entrada: [test-suite, wcag-criteria, ci-pipeline]
+      saida: [automated-test-suite, ci-integration, accessibility-report]
+      confidence: 0.97
+
+    # qa-cro-specialist
+    - name: cross-browser-testing
+      agent: qa-cro-specialist
+      entrada: [browser-matrix, test-cases, deployed-url]
+      saida: [test-results, bug-report, browser-compatibility-matrix]
+      confidence: 0.97
+
+    - name: responsive-testing
+      agent: qa-cro-specialist
+      entrada: [breakpoint-specs, device-matrix, visual-designs]
+      saida: [responsive-test-results, visual-regression-report, fixes-list]
+      confidence: 0.97
+
+    - name: security-testing
+      agent: qa-cro-specialist
+      entrada: [security-checklist, authentication-flows, api-endpoints]
+      saida: [security-audit-report, vulnerability-list, remediation-plan]
+      confidence: 0.97
+
+    - name: setup-ab-testing
+      agent: qa-cro-specialist
+      entrada: [hypothesis, variants, success-metrics, traffic-split]
+      saida: [ab-test-config, tracking-implementation, results-dashboard]
+      confidence: 0.97
+
+    - name: conversion-optimization
+      agent: qa-cro-specialist
+      entrada: [funnel-data, heatmap-data, user-behavior-analysis]
+      saida: [cro-recommendations, implemented-optimizations, lift-report]
+      confidence: 0.97
+
+    - name: setup-analytics
+      agent: qa-cro-specialist
+      entrada: [tracking-requirements, ga4-config, event-taxonomy]
+      saida: [ga4-setup, hotjar-config, custom-events, measurement-plan]
+      confidence: 0.97
+
+    # devops-engineer
+    - name: setup-cicd
+      agent: devops-engineer
+      entrada: [tech-stack, deployment-targets, testing-pipeline]
+      saida: [github-actions-config, build-pipeline, automated-tests-ci]
+      confidence: 0.97
+
+    - name: configure-hosting
+      agent: devops-engineer
+      entrada: [hosting-requirements, budget, performance-needs]
+      saida: [vercel-aws-config, domain-setup, environment-variables]
+      confidence: 0.97
+
+    - name: setup-ssl
+      agent: devops-engineer
+      entrada: [domains, ssl-provider, security-requirements]
+      saida: [ssl-certificates, https-redirect, hsts-config, security-headers]
+      confidence: 0.97
+
+    - name: configure-monitoring
+      agent: devops-engineer
+      entrada: [uptime-requirements, alerting-needs, monitoring-tools]
+      saida: [monitoring-dashboard, alert-rules, incident-runbook]
+      confidence: 0.97
+
+    - name: setup-staging
+      agent: devops-engineer
+      entrada: [production-config, staging-requirements, team-workflow]
+      saida: [staging-environment, preview-deployments, branch-deploy-config]
+      confidence: 0.97
+
+    - name: configure-backups
+      agent: devops-engineer
+      entrada: [data-inventory, rto-rpo-requirements, storage-budget]
+      saida: [backup-schedule, restore-procedures, rollback-automation]
+      confidence: 0.97
+
+    # brand-strategist
+    - name: define-brand-positioning
+      agent: brand-strategist
+      entrada: [business-goals, competitive-landscape, target-audience]
+      saida: [positioning-statement, value-proposition, competitive-differentials]
+      confidence: 0.97
+
+    - name: create-brand-identity
+      agent: brand-strategist
+      entrada: [positioning, creative-brief, references]
+      saida: [logo-system, color-palette, typography, visual-language]
+      confidence: 0.97
+
+    - name: define-tone-of-voice
+      agent: brand-strategist
+      entrada: [brand-personality, target-audience, communication-goals]
+      saida: [tone-of-voice-guide, vocabulary, writing-examples, do-dont]
+      confidence: 0.97
+
+    - name: create-brand-guidelines
+      agent: brand-strategist
+      entrada: [brand-identity, tone-of-voice, usage-rules]
+      saida: [brand-guidelines-pdf, figma-brand-kit, usage-examples]
+      confidence: 0.97
+
+    - name: ensure-cross-channel-consistency
+      agent: brand-strategist
+      entrada: [brand-guidelines, all-channels, touchpoint-inventory]
+      saida: [consistency-audit, corrections-list, channel-adaptation-guide]
+      confidence: 0.97
+
+metadata:
+  created_at: "2026-03-01T00:00:00Z"
+  source_docs:
+    - "./squad-webdesign.md"
+  user_adjustments: 0
+  overall_confidence: 0.97
+  total_agents: 20
+  total_tasks: 93
+  layers:
+    leadership: 4
+    specialists: 16
+  generated_by: "@squad-creator (Craft)"
+  aios_version: "2.1"

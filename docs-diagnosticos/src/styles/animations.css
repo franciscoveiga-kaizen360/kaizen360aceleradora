@@ -1,0 +1,135 @@
+/* animations.css — Global keyframe definitions */
+
+/* ─── Entry animations ─────────────────────────── */
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUpScale {
+  from { opacity: 0; transform: translateY(24px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(48px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-48px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(100%); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ─── Looping decorative animations ───────────── */
+
+/* Pulse glow — "Mais Popular" badge + CTA primary */
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(232, 119, 34, 0.4); }
+  50%       { box-shadow: 0 0 0 10px rgba(232, 119, 34, 0); }
+}
+
+/* Shimmer — mockup card skeleton */
+@keyframes shimmer {
+  0%   { opacity: 0.5; }
+  50%  { opacity: 0.85; }
+  100% { opacity: 0.5; }
+}
+
+/* Float — hero mockup gentle levitation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+
+/* Float slow — background decorative elements */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33%       { transform: translateY(-16px) rotate(1deg); }
+  66%       { transform: translateY(-8px) rotate(-1deg); }
+}
+
+/* Gradient shift — background mesh animation */
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glow pulse — accent circles in hero */
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50%       { opacity: 0.7; transform: scale(1.08); }
+}
+
+/* Spin slow — decorative ring */
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Blink — cursor in hero */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* Typewriter progress bar — mockup stat bars */
+@keyframes fillBar {
+  from { width: 0%; }
+  to   { width: var(--bar-fill, 70%); }
+}
+
+/* ─── Utility animation classes ──────────────── */
+
+.animate-float {
+  animation: float 5s var(--ease-in-out, ease-in-out) infinite;
+}
+
+.animate-float-slow {
+  animation: floatSlow 8s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 2.2s ease-in-out infinite;
+}
+
+.animate-glow-pulse {
+  animation: glowPulse 4s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spinSlow 20s linear infinite;
+}
+
+/* ─── Respect prefers-reduced-motion ─────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
