@@ -358,8 +358,11 @@ export default function DiagnosticoPage() {
                     Diagnóstico de Momento e Crescimento
                   </h1>
                   <p className={styles.openingSubtitle}>
-                    Em menos de 3 minutos, descubra onde você está na jornada de crescimento
-                    e quais são as 3 ações prioritárias para o seu negócio agora.
+                    Dentistas, donos de clínicas odontológicas e de radiologia crescem,
+                    mas travam em algum momento — e nem sempre fica claro o porquê.
+                    Este diagnóstico foi desenvolvido pela Docs Consultoria para
+                    identificar em qual estágio seu negócio está e quais são os 3
+                    movimentos mais importantes para você dar agora.
                   </p>
                   <div className={styles.openingMeta}>
                     <span className={styles.metaItem}>
