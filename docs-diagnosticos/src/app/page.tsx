@@ -515,7 +515,7 @@ export default function DiagnosticoPage() {
                   {errors.tempo_atuacao && (
                     <p className={styles.fieldError}>{errors.tempo_atuacao}</p>
                   )}
-                  <div className={`${styles.radioGrid} ${styles.radioGrid2}`}>
+                  <div className={`${styles.radioGrid} ${styles.radioGrid1}`}>
                     {TEMPO_OPTIONS.map(opt => (
                       <RadioCard
                         key={opt.value}
@@ -535,7 +535,7 @@ export default function DiagnosticoPage() {
                   {errors.objetivo_principal && (
                     <p className={styles.fieldError}>{errors.objetivo_principal}</p>
                   )}
-                  <div className={`${styles.radioGrid} ${styles.radioGrid2}`}>
+                  <div className={`${styles.radioGrid} ${styles.radioGrid1}`}>
                     {OBJETIVO_OPTIONS.map(opt => (
                       <RadioCard
                         key={opt.value}
