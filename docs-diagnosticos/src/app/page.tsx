@@ -71,25 +71,23 @@ const stepVariants = {
 }
 
 // ─── Option data ─────────────────────────────────
-const PERFIL_OPTIONS: { value: Perfil; icon: string; label: string; desc: string }[] = [
+const PERFIL_OPTIONS: { value: Perfil; icon: string; label: string }[] = [
   {
     value: 'dentista',
     icon: '🦷',
     label: 'Dentista / Clínica Odontológica',
-    desc: 'Atendimento clínico, especialidades, pacientes',
   },
   {
     value: 'dono_gestor_radiologia',
     icon: '🩻',
     label: 'Clínica de Radiologia Odontológica',
-    desc: 'Exames, laudos, dentistas parceiros',
   },
 ]
 
 const TEMPO_OPTIONS: { value: TempoAtuacao; icon: string; label: string; desc: string }[] = [
-  { value: 'menos_de_2_anos', icon: '🌱', label: 'Menos de 2 anos', desc: 'Início de trajetória' },
-  { value: '2_a_5_anos', icon: '📈', label: 'De 2 a 5 anos', desc: 'Fase de consolidação' },
-  { value: 'mais_de_5_anos', icon: '🏆', label: 'Mais de 5 anos', desc: 'Operação madura' },
+  { value: 'menos_de_2_anos', icon: '🌱', label: 'Menos de 2 anos', desc: '(Início de trajetória)' },
+  { value: '2_a_5_anos', icon: '📈', label: 'De 2 a 5 anos', desc: '(Fase de consolidação)' },
+  { value: 'mais_de_5_anos', icon: '🏆', label: 'Mais de 5 anos', desc: '(Operação madura)' },
 ]
 
 const OBJETIVO_OPTIONS: { value: ObjetivoPrincipal; icon: string; label: string }[] = [
@@ -100,11 +98,11 @@ const OBJETIVO_OPTIONS: { value: ObjetivoPrincipal; icon: string; label: string 
 ]
 
 const DOR_OPTIONS: { value: DorPrincipal; icon: string; label: string; desc: string }[] = [
-  { value: 'atrair_clientes', icon: '🎯', label: 'Atrair mais pacientes/clientes', desc: 'Captação e visibilidade' },
-  { value: 'vender_melhor', icon: '💬', label: 'Vender e converter melhor', desc: 'Aprovação de orçamentos' },
-  { value: 'melhorar_preco_margem', icon: '📊', label: 'Melhorar preço e margem', desc: 'Rentabilidade' },
-  { value: 'organizar_gestao', icon: '🏗️', label: 'Organizar gestão e processos', desc: 'Operação eficiente' },
-  { value: 'melhorar_equipe', icon: '👥', label: 'Desenvolver minha equipe', desc: 'Pessoas e liderança' },
+  { value: 'atrair_clientes', icon: '🎯', label: 'Atrair mais pacientes/clientes', desc: '(Captação e visibilidade)' },
+  { value: 'vender_melhor', icon: '💬', label: 'Vender e converter melhor', desc: '(Aprovação de orçamentos)' },
+  { value: 'melhorar_preco_margem', icon: '📊', label: 'Melhorar preço e margem', desc: '(Rentabilidade)' },
+  { value: 'organizar_gestao', icon: '🏗️', label: 'Organizar gestão e processos', desc: '(Operação eficiente)' },
+  { value: 'melhorar_equipe', icon: '👥', label: 'Desenvolver minha equipe', desc: '(Pessoas e liderança)' },
 ]
 
 const MATURIDADE_OPTIONS: { value: MomentoMaturidade; icon: string; label: string; desc: string }[] = [
@@ -112,25 +110,25 @@ const MATURIDADE_OPTIONS: { value: MomentoMaturidade; icon: string; label: strin
     value: 'comecando_estruturar',
     icon: '🔧',
     label: 'Começando a estruturar',
-    desc: 'Ainda sem processos definidos',
+    desc: '(Ainda sem processos definidos)',
   },
   {
     value: 'crescendo_desorganizacao',
     icon: '🌊',
     label: 'Crescendo com desorganização',
-    desc: 'Movimento, mas sem sistema',
+    desc: '(Movimento, mas sem sistema definido)',
   },
   {
     value: 'operando_com_gargalos',
     icon: '⚙️',
     label: 'Operando com gargalos',
-    desc: 'Funciona, mas trava em pontos',
+    desc: '(Funciona, mas trava em pontos-chave)',
   },
   {
     value: 'buscando_escala',
     icon: '🚀',
     label: 'Pronto para escalar',
-    desc: 'Base sólida, quer crescer mais',
+    desc: '(Base sólida, quer crescer mais)',
   },
 ]
 
@@ -329,7 +327,7 @@ export default function DiagnosticoPage() {
       {/* Header */}
       <header className={styles.header}>
         <span className={styles.logo}>
-          DOCS <span className={styles.logoAccent}>Growth</span>
+          DOCS <span className={styles.logoAccent}>Consultoria</span>
         </span>
         {step > 0 && (
           <span className={styles.stepIndicator}>
@@ -354,7 +352,6 @@ export default function DiagnosticoPage() {
                 exit="exit"
               >
                 <div className={styles.openingCard}>
-                  <span className={styles.eyebrow}>Ferramenta 1 — DOCS Growth</span>
                   <h1 className={styles.openingTitle}>
                     Diagnóstico de Momento e Crescimento
                   </h1>
@@ -670,7 +667,7 @@ export default function DiagnosticoPage() {
                     )}
                   </span>
                   <span className={styles.checkboxText}>
-                    Quero receber conteúdos e materiais gratuitos da DOCS Growth sobre gestão e crescimento de
+                    Quero receber conteúdos e materiais gratuitos da DOCS Consultoria sobre gestão e crescimento de
                     clínicas odontológicas. Posso cancelar a qualquer momento.
                   </span>
                 </label>

@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { getAllDiagnosticos } from '@/lib/db'
 
 export const metadata: Metadata = {
-  title: 'Painel Admin — DOCS Growth',
+  title: 'Painel Admin — DOCS Consultoria',
   robots: { index: false, follow: false },
 }
 
@@ -58,7 +58,7 @@ export default async function AdminPage() {
       {/* Header */}
       <header style={{ borderBottom: '1px solid #1e2130', padding: '1rem 2rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <div>
-          <span style={{ fontWeight: 700, fontSize: '1.1rem', color: '#fff' }}>DOCS <span style={{ color: '#4f8ef7' }}>Growth</span></span>
+          <span style={{ fontWeight: 700, fontSize: '1.1rem', color: '#fff' }}>DOCS <span style={{ color: '#4f8ef7' }}>Consultoria</span></span>
           <span style={{ marginLeft: '1rem', color: '#666', fontSize: '0.875rem' }}>Painel de Diagnósticos</span>
         </div>
         <span style={{ background: '#1e2130', borderRadius: '999px', padding: '0.25rem 0.75rem', fontSize: '0.8rem', color: '#aaa' }}>

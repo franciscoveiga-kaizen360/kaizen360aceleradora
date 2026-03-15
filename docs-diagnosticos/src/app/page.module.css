@@ -133,7 +133,7 @@
 
 .openingTitle {
   font-family: var(--font-display, 'Space Grotesk'), sans-serif;
-  font-size: var(--font-size-h3);
+  font-size: var(--font-size-h2);
   font-weight: var(--font-weight-bold);
   color: var(--color-white);
   line-height: var(--line-height-heading);
@@ -313,6 +313,9 @@
   font-size: var(--font-size-caption);
   color: var(--color-muted);
   line-height: 1.4;
+  margin-top: 3px;
+  font-weight: var(--font-weight-regular);
+  opacity: 0.8;
 }
 
 .radioCheck {
@@ -398,7 +401,7 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  padding: var(--space-2) 0;
+  padding: var(--space-3) 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   gap: var(--space-4);
 }
@@ -551,6 +554,10 @@
 
 /* ─── Responsive ──────────────────────────────── */
 @media (max-width: 480px) {
+  .openingTitle {
+    font-size: var(--font-size-h3);
+  }
+
   .openingCard {
     padding: var(--space-8) var(--space-6);
   }

@@ -4,7 +4,7 @@ import { getResultado } from '@/lib/db'
 import styles from './page.module.css'
 
 export const metadata: Metadata = {
-  title: 'Seu Diagnóstico — DOCS Growth',
+  title: 'Seu Diagnóstico — DOCS Consultoria',
   description: 'Seu diagnóstico de momento e crescimento personalizado.',
   robots: { index: false, follow: false },
 }
@@ -80,7 +80,7 @@ export default async function ResultadoPage({ searchParams }: PageProps) {
       {/* Header */}
       <header className={styles.header}>
         <Link href="/" className={styles.logo}>
-          DOCS <span className={styles.logoAccent}>Growth</span>
+          DOCS <span className={styles.logoAccent}>Consultoria</span>
         </Link>
         <div className={styles.headerAction}>
           <a
@@ -148,7 +148,7 @@ export default async function ResultadoPage({ searchParams }: PageProps) {
         <div className={styles.ctaArea}>
           <h3 className={styles.ctaTitle}>Quer colocar esses focos em prática?</h3>
           <p className={styles.ctaSubtitle}>
-            A equipe DOCS Growth pode te ajudar a implementar cada um desses pontos
+            A equipe DOCS Consultoria pode te ajudar a implementar cada um desses pontos
             com acompanhamento personalizado para sua realidade.
           </p>
           <a

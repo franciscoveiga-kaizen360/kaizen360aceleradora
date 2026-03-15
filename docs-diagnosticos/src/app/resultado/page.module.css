@@ -68,7 +68,7 @@
   background: linear-gradient(135deg, var(--color-surface) 0%, #252545 100%);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-2xl);
-  padding: var(--space-8) var(--space-8);
+  padding: var(--space-6) var(--space-8);
   margin-bottom: var(--space-6);
   position: relative;
   overflow: hidden;
@@ -111,7 +111,7 @@
 
 .headline {
   font-family: var(--font-display, 'Space Grotesk'), sans-serif;
-  font-size: var(--font-size-h3);
+  font-size: 1.625rem;
   font-weight: var(--font-weight-bold);
   color: var(--color-white);
   line-height: var(--line-height-heading);
@@ -125,7 +125,7 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-xl);
   padding: var(--space-6);
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-5);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
@@ -181,19 +181,27 @@
 
 .focusNumber {
   font-family: var(--font-display, 'Space Grotesk'), sans-serif;
-  font-size: 2rem;
+  font-size: 0.875rem;
   font-weight: var(--font-weight-bold);
   color: var(--color-primary);
-  line-height: 1;
-  min-width: 36px;
+  background: rgba(232, 119, 34, 0.12);
+  border: 1px solid rgba(232, 119, 34, 0.3);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
+  margin-top: 2px;
 }
 
 .focusText {
   font-size: var(--font-size-body);
   color: var(--color-muted-light);
   line-height: var(--line-height-body);
-  padding-top: 2px;
+  padding-top: 4px;
 }
 
 /* ─── CTA area ────────────────────────────────── */
