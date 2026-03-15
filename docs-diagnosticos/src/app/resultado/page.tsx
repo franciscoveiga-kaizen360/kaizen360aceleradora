@@ -154,7 +154,7 @@ export default async function ResultadoPage({ searchParams }: PageProps) {
             com acompanhamento personalizado para sua realidade.
           </p>
           <a
-            href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20fiz%20o%20diagn%C3%B3stico%20DOCS%20Growth%20e%20quero%20conversar%20sobre%20os%20meus%20focos"
+            href="https://wa.me/5511940194296?text=Ol%C3%A1%2C%20fiz%20o%20diagn%C3%B3stico%20da%20DOCS%20Consultoria%20e%20quero%20conversar%20sobre%20os%20meus%20focos"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.btnPrimary}
