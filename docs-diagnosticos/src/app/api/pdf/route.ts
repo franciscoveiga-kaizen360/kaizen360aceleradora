@@ -28,7 +28,7 @@ function generatePdfHtml(data: DiagnosticoRow): string {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Diagnóstico DOCS Growth — ${data.nome}</title>
+  <title>Diagnóstico DOCS Consultoria — ${data.nome}</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap');
 
@@ -58,11 +58,20 @@ function generatePdfHtml(data: DiagnosticoRow): string {
     }
 
     .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       font-weight: 700;
       color: #1a1a2e;
       letter-spacing: -0.02em;
+    }
+
+    .logo img {
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
     }
 
     .logo span {
@@ -220,7 +229,7 @@ function generatePdfHtml(data: DiagnosticoRow): string {
 <body>
   <div class="page">
     <header class="header">
-      <div class="logo">DOCS <span>Growth</span></div>
+      <div class="logo"><img src="/logo.png" alt="DOCS Consultoria" />DOCS <span>Consultoria</span></div>
       <div class="date">Diagnóstico gerado em ${dateFormatted}</div>
     </header>
 
@@ -260,8 +269,8 @@ function generatePdfHtml(data: DiagnosticoRow): string {
     </div>
 
     <footer class="footer">
-      <div class="footer-brand">DOCS <span>Growth</span> CRM</div>
-      <div class="footer-note">docsgrowth.com.br — Diagnóstico confidencial</div>
+      <div class="footer-brand">DOCS <span>Consultoria</span></div>
+      <div class="footer-note">elevation.docsconsultoria.com.br — Diagnóstico confidencial</div>
     </footer>
   </div>
 </body>

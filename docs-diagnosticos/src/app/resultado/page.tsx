@@ -183,9 +183,9 @@ export default async function ResultadoPage({ searchParams }: PageProps) {
             Política de Privacidade
           </Link>
           {' · '}
-          <Link href="/" className={styles.footerLink}>
-            docsgrowth.com.br
-          </Link>
+          <a href="https://elevation.docsconsultoria.com.br" className={styles.footerLink} target="_blank" rel="noopener noreferrer">
+            elevation.docsconsultoria.com.br
+          </a>
         </p>
       </main>
     </div>
